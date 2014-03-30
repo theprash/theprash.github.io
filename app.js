@@ -22693,7 +22693,12 @@ garden.core.style = function() {
   b.cljs$core$IFn$_invoke$arity$variadic = a;
   return b;
 }();
+cljs.core.enable_console_print_BANG_.call(null);
 var grow_game = {core:{}};
+grow_game.core.all_cells = cljs.core.atom.call(null, null);
+grow_game.core.full_cell_vecs = cljs.core.atom.call(null, cljs.core.PersistentHashSet.EMPTY);
+grow_game.core.full_cell_vecs = cljs.core.atom.call(null, cljs.core.PersistentHashSet.EMPTY);
+grow_game.core.cells_to_grow = cljs.core.atom.call(null, cljs.core.PersistentHashSet.EMPTY);
 grow_game.core.random_colour_string = function() {
   var a = cljs.core.concat.call(null, cljs.core.range.call(null, 10), new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, "ABCDEF".split(""), null));
   return cljs.core.apply.call(null, cljs.core.str, "#", cljs.core.repeatedly.call(null, 6, function() {
@@ -22737,95 +22742,160 @@ grow_game.core.cell_classes = new cljs.core.PersistentVector(null, 2, 5, cljs.co
 grow_game.core.set_page_style_BANG_ = function(a) {
   return cljs.core.first.call(null, cljs.core.array_seq.call(null, document.head.getElementsByTagName("style"))).innerHTML = a;
 };
-grow_game.core.cells_random_class_BANG_ = function(a) {
-  return cljs.core.dorun.call(null, cljs.core.map.call(null, function(a) {
-    return a.className = cljs.core.rand_nth.call(null, grow_game.core.cell_classes);
-  }, cljs.core.take.call(null, a, cljs.core.shuffle.call(null, cljs.core.vals.call(null, grow_game.core.all_cells)))));
-};
 grow_game.core.full_cells = function() {
-  return cljs.core.array_seq.call(null, goog.dom.getElementsByClass("cell-full"));
+  return cljs.core.map.call(null, function(a) {
+    return cljs.core.deref.call(null, grow_game.core.all_cells).call(null, a);
+  }, cljs.core.deref.call(null, grow_game.core.full_cell_vecs));
 };
 grow_game.core.fill_cell_BANG_ = function(a) {
-  return a.className = "cell-full";
-};
-grow_game.core.fill_adjacent_cells_BANG_ = function(a) {
-  return cljs.core.dorun.call(null, cljs.core.map.call(null, grow_game.core.fill_cell_BANG_, cljs.core.filter.call(null, cljs.core.complement.call(null, cljs.core.nil_QMARK_), grow_game.core.get_adjacent_cells.call(null, a))));
-};
-grow_game.core.spread_full_cells_BANG_ = function() {
-  return cljs.core.dorun.call(null, cljs.core.map.call(null, function(a) {
-    return grow_game.core.fill_adjacent_cells_BANG_.call(null, a);
-  }, grow_game.core.full_cells.call(null)));
-};
-grow_game.core.set_cells_click_BANG_ = function() {
-  return cljs.core.dorun.call(null, cljs.core.map.call(null, function(a) {
-    return a.onclick = function() {
-      return grow_game.core.fill_cell_BANG_.call(null, a);
-    };
-  }, cljs.core.vals.call(null, grow_game.core.all_cells)));
-};
-grow_game.core.start_timer = function() {
-  var a = new goog.Timer(500);
-  a.start();
-  return goog.events.listen(a, goog.Timer.TICK, function() {
-    return grow_game.core.spread_full_cells_BANG_.call(null, 20);
+  cljs.core.deref.call(null, grow_game.core.all_cells).call(null, a).className = "cell-full";
+  return cljs.core.swap_BANG_.call(null, grow_game.core.full_cell_vecs, function(b) {
+    return cljs.core.conj.call(null, b, a);
   });
 };
 grow_game.core.id__GT_vector = function(a) {
   return cljs.core.vec.call(null, cljs.core.map.call(null, cljs.reader.read_string, clojure.string.split.call(null, a, /-/)));
 };
 grow_game.core.vector__GT_id = function(a) {
-  return cljs.core.vec.call(null, cljs.core.map.call(null, grow_game.core.read_string, clojure.string.join.call(null, "-", a)));
+  return cljs.core.vec.call(null, cljs.core.map.call(null, cljs.reader.read_string, clojure.string.join.call(null, "-", a)));
 };
 grow_game.core.adjacent_relative_vecs = new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [1, 0], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, 1], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [-1, 0], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, 
 -1], null)], null);
-grow_game.core.get_adjacent_vecs = function(a) {
-  var b = grow_game.core.id__GT_vector.call(null, a);
-  return function d(a) {
-    return new cljs.core.LazySeq(null, function() {
-      for (;;) {
-        var f = cljs.core.seq.call(null, a);
-        if (f) {
-          if (cljs.core.chunked_seq_QMARK_.call(null, f)) {
-            var g = cljs.core.chunk_first.call(null, f), h = cljs.core.count.call(null, g), k = cljs.core.chunk_buffer.call(null, h);
-            a: {
-              for (var l = 0;;) {
-                if (l < h) {
-                  var m = cljs.core._nth.call(null, g, l);
-                  cljs.core.chunk_append.call(null, k, cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, b, m)));
-                  l += 1;
-                } else {
-                  g = !0;
-                  break a;
+grow_game.core.adjacent_empty_vecs = function(a) {
+  return cljs.core.filter.call(null, function(a) {
+    var c = cljs.core.not.call(null, cljs.core.deref.call(null, grow_game.core.full_cell_vecs).call(null, a));
+    return c ? cljs.core.deref.call(null, grow_game.core.all_cells).call(null, a) : c;
+  }, function() {
+    return function c(d) {
+      return new cljs.core.LazySeq(null, function() {
+        for (;;) {
+          var e = cljs.core.seq.call(null, d);
+          if (e) {
+            if (cljs.core.chunked_seq_QMARK_.call(null, e)) {
+              var f = cljs.core.chunk_first.call(null, e), g = cljs.core.count.call(null, f), h = cljs.core.chunk_buffer.call(null, g);
+              a: {
+                for (var k = 0;;) {
+                  if (k < g) {
+                    var l = cljs.core._nth.call(null, f, k);
+                    cljs.core.chunk_append.call(null, h, cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, a, l)));
+                    k += 1;
+                  } else {
+                    f = !0;
+                    break a;
+                  }
                 }
+                f = void 0;
               }
-              g = void 0;
+              return f ? cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, h), c.call(null, cljs.core.chunk_rest.call(null, e))) : cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, h), null);
             }
-            return g ? cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, k), d.call(null, cljs.core.chunk_rest.call(null, f))) : cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, k), null);
+            h = cljs.core.first.call(null, e);
+            return cljs.core.cons.call(null, cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, a, h)), c.call(null, cljs.core.rest.call(null, e)));
           }
-          k = cljs.core.first.call(null, f);
-          return cljs.core.cons.call(null, cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, b, k)), d.call(null, cljs.core.rest.call(null, f)));
+          return null;
         }
+      }, null, null);
+    }.call(null, grow_game.core.adjacent_relative_vecs);
+  }());
+};
+grow_game.core.add_to_grow_queue_BANG_ = function(a) {
+  return cljs.core.swap_BANG_.call(null, grow_game.core.cells_to_grow, function(b) {
+    return cljs.core.conj.call(null, b, a);
+  });
+};
+grow_game.core.fill_adjacent_cells_BANG_ = function(a) {
+  a = cljs.core.seq.call(null, grow_game.core.adjacent_empty_vecs.call(null, a));
+  for (var b = null, c = 0, d = 0;;) {
+    if (d < c) {
+      var e = cljs.core._nth.call(null, b, d);
+      grow_game.core.fill_cell_BANG_.call(null, e);
+      grow_game.core.add_to_grow_queue_BANG_.call(null, e);
+      d += 1;
+    } else {
+      if (a = cljs.core.seq.call(null, a)) {
+        b = a, cljs.core.chunked_seq_QMARK_.call(null, b) ? (a = cljs.core.chunk_first.call(null, b), c = cljs.core.chunk_rest.call(null, b), b = a, e = cljs.core.count.call(null, a), a = c, c = e) : (e = cljs.core.first.call(null, b), grow_game.core.fill_cell_BANG_.call(null, e), grow_game.core.add_to_grow_queue_BANG_.call(null, e), a = cljs.core.next.call(null, b), b = null, c = 0), d = 0;
+      } else {
         return null;
       }
-    }, null, null);
-  }.call(null, grow_game.core.adjacent_relative_vecs);
+    }
+  }
 };
-grow_game.core.get_adjacent_cells = function(a) {
-  return cljs.core.map.call(null, function(a) {
-    return grow_game.core.all_cells.call(null, a);
-  }, grow_game.core.get_adjacent_vecs.call(null, a.id));
+grow_game.core.grow_full_cells_BANG_ = function(a) {
+  a = cljs.core.seq.call(null, a);
+  for (var b = null, c = 0, d = 0;;) {
+    if (d < c) {
+      var e = cljs.core._nth.call(null, b, d);
+      grow_game.core.fill_adjacent_cells_BANG_.call(null, e);
+      d += 1;
+    } else {
+      if (a = cljs.core.seq.call(null, a)) {
+        b = a, cljs.core.chunked_seq_QMARK_.call(null, b) ? (a = cljs.core.chunk_first.call(null, b), c = cljs.core.chunk_rest.call(null, b), b = a, e = cljs.core.count.call(null, a), a = c, c = e) : (e = cljs.core.first.call(null, b), grow_game.core.fill_adjacent_cells_BANG_.call(null, e), a = cljs.core.next.call(null, b), b = null, c = 0), d = 0;
+      } else {
+        return null;
+      }
+    }
+  }
+};
+grow_game.core.tick_BANG_ = function() {
+  var a = (new Date).getTime(), b;
+  b = cljs.core.deref.call(null, grow_game.core.cells_to_grow);
+  cljs.core.reset_BANG_.call(null, grow_game.core.cells_to_grow, cljs.core.PersistentHashSet.EMPTY);
+  b = grow_game.core.grow_full_cells_BANG_.call(null, b);
+  cljs.core.prn.call(null, [cljs.core.str("Elapsed time: "), cljs.core.str((new Date).getTime() - a), cljs.core.str(" msecs")].join(""));
+  return b;
+};
+grow_game.core.cell_click = function(a) {
+  grow_game.core.fill_cell_BANG_.call(null, a);
+  return grow_game.core.add_to_grow_queue_BANG_.call(null, a);
+};
+grow_game.core.set_cells_click_BANG_ = function() {
+  for (var a = cljs.core.seq.call(null, cljs.core.vals.call(null, cljs.core.deref.call(null, grow_game.core.all_cells))), b = null, c = 0, d = 0;;) {
+    if (d < c) {
+      var e = cljs.core._nth.call(null, b, d), f = grow_game.core.id__GT_vector.call(null, e.id);
+      e.onclick = function(a, b, c, d, e, f) {
+        return function() {
+          return grow_game.core.cell_click.call(null, e);
+        };
+      }(a, b, c, d, f, e);
+      d += 1;
+    } else {
+      var g = cljs.core.seq.call(null, a);
+      if (g) {
+        f = g;
+        if (cljs.core.chunked_seq_QMARK_.call(null, f)) {
+          a = cljs.core.chunk_first.call(null, f), d = cljs.core.chunk_rest.call(null, f), b = a, c = cljs.core.count.call(null, a), a = d;
+        } else {
+          var e = cljs.core.first.call(null, f), h = grow_game.core.id__GT_vector.call(null, e.id);
+          e.onclick = function(a, b, c, d, e, f, g, h) {
+            return function() {
+              return grow_game.core.cell_click.call(null, e);
+            };
+          }(a, b, c, d, h, e, f, g);
+          a = cljs.core.next.call(null, f);
+          b = null;
+          c = 0;
+        }
+        d = 0;
+      } else {
+        return null;
+      }
+    }
+  }
+};
+grow_game.core.start_timer = function() {
+  var a = new goog.Timer(500);
+  a.start();
+  return goog.events.listen(a, goog.Timer.TICK, grow_game.core.tick_BANG_);
 };
 grow_game.core.start = function() {
   document.body.innerHTML = grow_game.core.grid.call(null, grow_game.core.grid_rows, grow_game.core.grid_cols);
   var a = cljs.core.mapcat.call(null, function(a) {
     return cljs.core.array_seq.call(null, goog.dom.getChildren(a));
   }, cljs.core.array_seq.call(null, goog.dom.getElementsByClass("row")));
-  grow_game.core.all_cells = cljs.core.zipmap.call(null, cljs.core.map.call(null, function(a) {
+  cljs.core.reset_BANG_.call(null, grow_game.core.all_cells, cljs.core.zipmap.call(null, cljs.core.map.call(null, function(a) {
     return grow_game.core.id__GT_vector.call(null, a.id);
-  }, a), a);
+  }, a), a));
   grow_game.core.set_cells_click_BANG_.call(null);
   grow_game.core.set_page_style_BANG_.call(null, grow_game.core.page_css.call(null));
   return grow_game.core.start_timer.call(null);
 };
 window.onload = grow_game.core.start;
-grow_game.core.all_cells = cljs.core.atom.call(null, null);
