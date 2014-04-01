@@ -22771,8 +22771,8 @@ grow_game.core.adjacent_relative_vecs = new cljs.core.PersistentVector(null, 4, 
 -1], null)], null);
 grow_game.core.adjacent_different_vecs = function(a, b) {
   return cljs.core.filter.call(null, function(a) {
-    var d = cljs.core.not.call(null, cljs.core.deref.call(null, grow_game.core.cell_vecs_by_class).call(null, b).call(null, a));
-    return d ? cljs.core.deref.call(null, grow_game.core.all_cells).call(null, a) : d;
+    var b = cljs.core.deref.call(null, grow_game.core.cell_vecs_by_class).call(null, "cell-empty").call(null, a);
+    return cljs.core.truth_(b) ? cljs.core.deref.call(null, grow_game.core.all_cells).call(null, a) : b;
   }, function() {
     return function d(b) {
       return new cljs.core.LazySeq(null, function() {
@@ -22827,7 +22827,7 @@ grow_game.core.fill_adjacent_cells_BANG_ = function(a, b) {
 };
 grow_game.core.grow_cell_BANG_ = function(a) {
   var b = grow_game.core.get_cell_class.call(null, a);
-  return grow_game.core.fill_adjacent_cells_BANG_.call(null, a, b);
+  return cljs.core.not_EQ_.call(null, b, "cell-empty") ? grow_game.core.fill_adjacent_cells_BANG_.call(null, a, b) : null;
 };
 grow_game.core.grow_cells_BANG_ = function(a) {
   a = cljs.core.seq.call(null, a);
@@ -22903,6 +22903,19 @@ grow_game.core.start = function() {
   cljs.core.reset_BANG_.call(null, grow_game.core.all_cells, cljs.core.zipmap.call(null, cljs.core.map.call(null, function(a) {
     return grow_game.core.id__GT_vector.call(null, a.id);
   }, a), a));
+  for (var a = cljs.core.seq.call(null, cljs.core.keys.call(null, cljs.core.deref.call(null, grow_game.core.all_cells))), b = null, c = 0, d = 0;;) {
+    if (d < c) {
+      var e = cljs.core._nth.call(null, b, d);
+      grow_game.core.set_cell_BANG_.call(null, e, "cell-empty");
+      d += 1;
+    } else {
+      if (a = cljs.core.seq.call(null, a)) {
+        b = a, cljs.core.chunked_seq_QMARK_.call(null, b) ? (a = cljs.core.chunk_first.call(null, b), d = cljs.core.chunk_rest.call(null, b), b = a, c = cljs.core.count.call(null, a), a = d) : (a = cljs.core.first.call(null, b), grow_game.core.set_cell_BANG_.call(null, a, "cell-empty"), a = cljs.core.next.call(null, b), b = null, c = 0), d = 0;
+      } else {
+        break;
+      }
+    }
+  }
   grow_game.core.set_cell_BANG_.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, 0], null), "cell-blue");
   grow_game.core.set_cell_BANG_.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [grow_game.core.grid_rows - 1, grow_game.core.grid_cols - 1], null), "cell-green");
   grow_game.core.set_cells_click_BANG_.call(null);
