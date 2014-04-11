@@ -2701,100 +2701,100 @@ cljs.core._invoke = function() {
       throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
     }
     return t.call(null, a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s);
-  }, v = function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t) {
+  }, u = function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t) {
     if (a ? a.cljs$core$IFn$_invoke$arity$17 : a) {
       return a.cljs$core$IFn$_invoke$arity$17(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t);
-    }
-    var u;
-    u = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
-    if (!u && (u = cljs.core._invoke._, !u)) {
-      throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
-    }
-    return u.call(null, a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t);
-  }, u = function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u) {
-    if (a ? a.cljs$core$IFn$_invoke$arity$18 : a) {
-      return a.cljs$core$IFn$_invoke$arity$18(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u);
-    }
-    var w;
-    w = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
-    if (!w && (w = cljs.core._invoke._, !w)) {
-      throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
-    }
-    return w.call(null, a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u);
-  }, w = function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, w) {
-    if (a ? a.cljs$core$IFn$_invoke$arity$19 : a) {
-      return a.cljs$core$IFn$_invoke$arity$19(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, w);
     }
     var v;
     v = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
     if (!v && (v = cljs.core._invoke._, !v)) {
       throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
     }
-    return v.call(null, a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, w);
-  }, B = function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, w, v) {
-    if (a ? a.cljs$core$IFn$_invoke$arity$20 : a) {
-      return a.cljs$core$IFn$_invoke$arity$20(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, w, v);
+    return v.call(null, a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t);
+  }, v = function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, v) {
+    if (a ? a.cljs$core$IFn$_invoke$arity$18 : a) {
+      return a.cljs$core$IFn$_invoke$arity$18(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, v);
     }
-    var B;
-    B = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
-    if (!B && (B = cljs.core._invoke._, !B)) {
+    var w;
+    w = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
+    if (!w && (w = cljs.core._invoke._, !w)) {
       throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
     }
-    return B.call(null, a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, w, v);
-  }, I = function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, w, v, B) {
+    return w.call(null, a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, v);
+  }, w = function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, v, w) {
+    if (a ? a.cljs$core$IFn$_invoke$arity$19 : a) {
+      return a.cljs$core$IFn$_invoke$arity$19(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, v, w);
+    }
+    var u;
+    u = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
+    if (!u && (u = cljs.core._invoke._, !u)) {
+      throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
+    }
+    return u.call(null, a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, v, w);
+  }, y = function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, v, w, u) {
+    if (a ? a.cljs$core$IFn$_invoke$arity$20 : a) {
+      return a.cljs$core$IFn$_invoke$arity$20(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, v, w, u);
+    }
+    var y;
+    y = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
+    if (!y && (y = cljs.core._invoke._, !y)) {
+      throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
+    }
+    return y.call(null, a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, v, w, u);
+  }, I = function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, v, w, u, y) {
     if (a ? a.cljs$core$IFn$_invoke$arity$21 : a) {
-      return a.cljs$core$IFn$_invoke$arity$21(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, w, v, B);
+      return a.cljs$core$IFn$_invoke$arity$21(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, v, w, u, y);
     }
     var I;
     I = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
     if (!I && (I = cljs.core._invoke._, !I)) {
       throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
     }
-    return I.call(null, a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, w, v, B);
-  }, a = function(a, x, y, z, A, C, D, E, F, G, H, J, K, L, M, N, O, P, Q, S, T) {
+    return I.call(null, a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, v, w, u, y);
+  }, a = function(a, x, z, A, B, C, D, E, F, G, H, J, K, L, M, N, O, P, Q, S, T) {
     switch(arguments.length) {
       case 1:
         return b.call(this, a);
       case 2:
         return c.call(this, a, x);
       case 3:
-        return d.call(this, a, x, y);
+        return d.call(this, a, x, z);
       case 4:
-        return e.call(this, a, x, y, z);
+        return e.call(this, a, x, z, A);
       case 5:
-        return f.call(this, a, x, y, z, A);
+        return f.call(this, a, x, z, A, B);
       case 6:
-        return g.call(this, a, x, y, z, A, C);
+        return g.call(this, a, x, z, A, B, C);
       case 7:
-        return h.call(this, a, x, y, z, A, C, D);
+        return h.call(this, a, x, z, A, B, C, D);
       case 8:
-        return k.call(this, a, x, y, z, A, C, D, E);
+        return k.call(this, a, x, z, A, B, C, D, E);
       case 9:
-        return l.call(this, a, x, y, z, A, C, D, E, F);
+        return l.call(this, a, x, z, A, B, C, D, E, F);
       case 10:
-        return m.call(this, a, x, y, z, A, C, D, E, F, G);
+        return m.call(this, a, x, z, A, B, C, D, E, F, G);
       case 11:
-        return n.call(this, a, x, y, z, A, C, D, E, F, G, H);
+        return n.call(this, a, x, z, A, B, C, D, E, F, G, H);
       case 12:
-        return p.call(this, a, x, y, z, A, C, D, E, F, G, H, J);
+        return p.call(this, a, x, z, A, B, C, D, E, F, G, H, J);
       case 13:
-        return q.call(this, a, x, y, z, A, C, D, E, F, G, H, J, K);
+        return q.call(this, a, x, z, A, B, C, D, E, F, G, H, J, K);
       case 14:
-        return r.call(this, a, x, y, z, A, C, D, E, F, G, H, J, K, L);
+        return r.call(this, a, x, z, A, B, C, D, E, F, G, H, J, K, L);
       case 15:
-        return s.call(this, a, x, y, z, A, C, D, E, F, G, H, J, K, L, M);
+        return s.call(this, a, x, z, A, B, C, D, E, F, G, H, J, K, L, M);
       case 16:
-        return t.call(this, a, x, y, z, A, C, D, E, F, G, H, J, K, L, M, N);
+        return t.call(this, a, x, z, A, B, C, D, E, F, G, H, J, K, L, M, N);
       case 17:
-        return v.call(this, a, x, y, z, A, C, D, E, F, G, H, J, K, L, M, N, O);
+        return u.call(this, a, x, z, A, B, C, D, E, F, G, H, J, K, L, M, N, O);
       case 18:
-        return u.call(this, a, x, y, z, A, C, D, E, F, G, H, J, K, L, M, N, O, P);
+        return v.call(this, a, x, z, A, B, C, D, E, F, G, H, J, K, L, M, N, O, P);
       case 19:
-        return w.call(this, a, x, y, z, A, C, D, E, F, G, H, J, K, L, M, N, O, P, Q);
+        return w.call(this, a, x, z, A, B, C, D, E, F, G, H, J, K, L, M, N, O, P, Q);
       case 20:
-        return B.call(this, a, x, y, z, A, C, D, E, F, G, H, J, K, L, M, N, O, P, Q, S);
+        return y.call(this, a, x, z, A, B, C, D, E, F, G, H, J, K, L, M, N, O, P, Q, S);
       case 21:
-        return I.call(this, a, x, y, z, A, C, D, E, F, G, H, J, K, L, M, N, O, P, Q, S, T);
+        return I.call(this, a, x, z, A, B, C, D, E, F, G, H, J, K, L, M, N, O, P, Q, S, T);
     }
     throw Error("Invalid arity: " + arguments.length);
   };
@@ -2814,10 +2814,10 @@ cljs.core._invoke = function() {
   a.cljs$core$IFn$_invoke$arity$14 = r;
   a.cljs$core$IFn$_invoke$arity$15 = s;
   a.cljs$core$IFn$_invoke$arity$16 = t;
-  a.cljs$core$IFn$_invoke$arity$17 = v;
-  a.cljs$core$IFn$_invoke$arity$18 = u;
+  a.cljs$core$IFn$_invoke$arity$17 = u;
+  a.cljs$core$IFn$_invoke$arity$18 = v;
   a.cljs$core$IFn$_invoke$arity$19 = w;
-  a.cljs$core$IFn$_invoke$arity$20 = B;
+  a.cljs$core$IFn$_invoke$arity$20 = y;
   a.cljs$core$IFn$_invoke$arity$21 = I;
   return a;
 }();
@@ -7240,31 +7240,31 @@ cljs.core.apply_to = function(a, b, c) {
   if (14 === b) {
     return a.cljs$core$IFn$_invoke$arity$14 ? a.cljs$core$IFn$_invoke$arity$14(c, d, e, f, g, a, h, k, l, m, n, p, q, r) : a.call(null, c, d, e, f, g, a, h, k, l, m, n, p, q, r);
   }
-  var s = cljs.core._first.call(null, t), v = cljs.core._rest.call(null, t);
+  var s = cljs.core._first.call(null, t), u = cljs.core._rest.call(null, t);
   if (15 === b) {
     return a.cljs$core$IFn$_invoke$arity$15 ? a.cljs$core$IFn$_invoke$arity$15(c, d, e, f, g, a, h, k, l, m, n, p, q, r, s) : a.call(null, c, d, e, f, g, a, h, k, l, m, n, p, q, r, s);
   }
-  var t = cljs.core._first.call(null, v), u = cljs.core._rest.call(null, v);
+  var t = cljs.core._first.call(null, u), v = cljs.core._rest.call(null, u);
   if (16 === b) {
     return a.cljs$core$IFn$_invoke$arity$16 ? a.cljs$core$IFn$_invoke$arity$16(c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t) : a.call(null, c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t);
   }
-  var v = cljs.core._first.call(null, u), w = cljs.core._rest.call(null, u);
+  var u = cljs.core._first.call(null, v), w = cljs.core._rest.call(null, v);
   if (17 === b) {
-    return a.cljs$core$IFn$_invoke$arity$17 ? a.cljs$core$IFn$_invoke$arity$17(c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, v) : a.call(null, c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, v);
+    return a.cljs$core$IFn$_invoke$arity$17 ? a.cljs$core$IFn$_invoke$arity$17(c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, u) : a.call(null, c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, u);
   }
-  var u = cljs.core._first.call(null, w), B = cljs.core._rest.call(null, w);
+  var v = cljs.core._first.call(null, w), y = cljs.core._rest.call(null, w);
   if (18 === b) {
-    return a.cljs$core$IFn$_invoke$arity$18 ? a.cljs$core$IFn$_invoke$arity$18(c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, v, u) : a.call(null, c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, v, u);
+    return a.cljs$core$IFn$_invoke$arity$18 ? a.cljs$core$IFn$_invoke$arity$18(c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, u, v) : a.call(null, c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, u, v);
   }
-  w = cljs.core._first.call(null, B);
-  B = cljs.core._rest.call(null, B);
+  w = cljs.core._first.call(null, y);
+  y = cljs.core._rest.call(null, y);
   if (19 === b) {
-    return a.cljs$core$IFn$_invoke$arity$19 ? a.cljs$core$IFn$_invoke$arity$19(c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, v, u, w) : a.call(null, c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, v, u, w);
+    return a.cljs$core$IFn$_invoke$arity$19 ? a.cljs$core$IFn$_invoke$arity$19(c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, u, v, w) : a.call(null, c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, u, v, w);
   }
-  var I = cljs.core._first.call(null, B);
-  cljs.core._rest.call(null, B);
+  var I = cljs.core._first.call(null, y);
+  cljs.core._rest.call(null, y);
   if (20 === b) {
-    return a.cljs$core$IFn$_invoke$arity$20 ? a.cljs$core$IFn$_invoke$arity$20(c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, v, u, w, I) : a.call(null, c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, v, u, w, I);
+    return a.cljs$core$IFn$_invoke$arity$20 ? a.cljs$core$IFn$_invoke$arity$20(c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, u, v, w, I) : a.call(null, c, d, e, f, g, a, h, k, l, m, n, p, q, r, s, t, u, v, w, I);
   }
   throw Error("Only up to 20 arguments supported on functions");
 };
@@ -20921,10 +20921,10 @@ cljs.reader.parse_and_validate_timestamp = function(a) {
   }(), l = cljs.core._EQ_.call(null, l, "-") ? -1 : 1, t = function() {
     var a = cljs.reader.parse_int.call(null, m);
     return cljs.core.truth_(a) ? a : 0;
-  }(), v = function() {
+  }(), u = function() {
     var a = cljs.reader.parse_int.call(null, n);
     return cljs.core.truth_(a) ? a : 0;
-  }(), l = l * (60 * t + v);
+  }(), l = l * (60 * t + u);
   return new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [a, cljs.reader.check.call(null, 1, b, 12, "timestamp month field must be in range 1..12"), cljs.reader.check.call(null, 1, c, cljs.reader.days_in_month.call(null, b, cljs.reader.leap_year_QMARK_.call(null, a)), "timestamp day field must be in range 1..last day in month"), cljs.reader.check.call(null, 0, p, 23, "timestamp hour field must be in range 0..23"), cljs.reader.check.call(null, 0, q, 59, "timestamp minute field must be in range 0..59"), 
   cljs.reader.check.call(null, 0, r, cljs.core._EQ_.call(null, q, 59) ? 60 : 59, "timestamp second field must be in range 0..60"), cljs.reader.check.call(null, 0, s, 999, "timestamp millisecond field must be in range 0..999"), l], null);
 };
@@ -22693,32 +22693,32 @@ garden.core.style = function() {
   b.cljs$core$IFn$_invoke$arity$variadic = a;
   return b;
 }();
-cljs.core.enable_console_print_BANG_.call(null);
 var grow_game = {core:{}};
+cljs.core.enable_console_print_BANG_.call(null);
 grow_game.core.all_cells = cljs.core.atom.call(null, null);
-grow_game.core.cell_vecs_by_class = cljs.core.atom.call(null, cljs.core.zipmap.call(null, new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, ["cell-empty", "cell-red", "cell-blue", "cell-green"], null), cljs.core.repeat.call(null, cljs.core.PersistentHashSet.EMPTY)));
-grow_game.core.cells_to_grow = cljs.core.atom.call(null, cljs.core.PersistentHashSet.EMPTY);
+grow_game.core.cell_vecs_by_class = cljs.core.atom.call(null, cljs.core.zipmap.call(null, new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["cell-empty", "cell-red", "cell-blue", "cell-yellow", "cell-wall"], null), cljs.core.repeat.call(null, cljs.core.PersistentHashSet.EMPTY)));
+grow_game.core.grow_queue = cljs.core.atom.call(null, cljs.core.PersistentHashSet.EMPTY);
+grow_game.core.add_to_grow_queue_BANG_ = function(a) {
+  return cljs.core.swap_BANG_.call(null, grow_game.core.grow_queue, function(b) {
+    return cljs.core.conj.call(null, b, a);
+  });
+};
+grow_game.core.clear_grow_queue_BANG_ = function() {
+  return cljs.core.reset_BANG_.call(null, grow_game.core.grow_queue, cljs.core.PersistentHashSet.EMPTY);
+};
 grow_game.core.cell = function(a, b) {
-  var c = [cljs.core.str(a), cljs.core.str("-"), cljs.core.str(b)].join(""), c = cljs.core.keyword.call(null, [cljs.core.str("div#"), cljs.core.str(c), cljs.core.str(".cell-empty")].join(""));
-  return "" + cljs.core.str(hiccups.runtime.render_element.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [c], null)));
+  var c = [cljs.core.str(a), cljs.core.str("-"), cljs.core.str(b)].join("");
+  return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.keyword.call(null, [cljs.core.str("div#"), cljs.core.str(c)].join(""))], null);
 };
 grow_game.core.row = function(a, b) {
-  return "" + cljs.core.str(function() {
-    var c = cljs.core.apply.call(null, cljs.core.str, cljs.core.map.call(null, function(b) {
-      return grow_game.core.cell.call(null, a, b);
-    }, cljs.core.range.call(null, b)));
-    return cljs.core.map_QMARK_.call(null, c) ? [cljs.core.str("\x3cdiv"), cljs.core.str(hiccups.runtime.render_attr_map.call(null, cljs.core.merge.call(null, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "id", "id", 1013907597), null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row"], null), c))), cljs.core.str("\x3e"), cljs.core.str("\x3c/div\x3e")].join("") : [cljs.core.str('\x3cdiv class\x3d"row"\x3e'), cljs.core.str(hiccups.runtime.render_html.call(null, 
-    c)), cljs.core.str("\x3c/div\x3e")].join("");
-  }());
+  return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.row", "div.row", 2686478959), cljs.core.map.call(null, function(b) {
+    return grow_game.core.cell.call(null, a, b);
+  }, cljs.core.range.call(null, b))], null);
 };
 grow_game.core.grid = function(a, b) {
-  return "" + cljs.core.str(function() {
-    var c = cljs.core.apply.call(null, cljs.core.str, cljs.core.map.call(null, function(a) {
-      return grow_game.core.row.call(null, a, b);
-    }, cljs.core.range.call(null, a)));
-    return cljs.core.map_QMARK_.call(null, c) ? [cljs.core.str("\x3cdiv"), cljs.core.str(hiccups.runtime.render_attr_map.call(null, cljs.core.merge.call(null, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "id", "id", 1013907597), "grid", new cljs.core.Keyword(null, "class", "class", 1108647146), null], null), c))), cljs.core.str("\x3e"), cljs.core.str("\x3c/div\x3e")].join("") : [cljs.core.str('\x3cdiv id\x3d"grid"\x3e'), cljs.core.str(hiccups.runtime.render_html.call(null, 
-    c)), cljs.core.str("\x3c/div\x3e")].join("");
-  }());
+  return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div#grid", "div#grid", 1313629034), cljs.core.map.call(null, function(a) {
+    return grow_game.core.row.call(null, a, b);
+  }, cljs.core.range.call(null, a))], null);
 };
 grow_game.core.get_cell_class = function(a) {
   var b = cljs.core.first.call(null, cljs.core.filter.call(null, function(b) {
@@ -22729,96 +22729,94 @@ grow_game.core.get_cell_class = function(a) {
 grow_game.core.grid_rows = 60;
 grow_game.core.grid_cols = 60;
 grow_game.core.cell_size = 10;
-grow_game.core.grid_width = grow_game.core.grid_cols * (grow_game.core.cell_size + 1);
-cljs.core.vec.call(null, cljs.core.map.call(null, function(a) {
-  return cljs.core.keyword.call(null, [cljs.core.str("div."), cljs.core.str(a)].join(""));
-}, cljs.core.keys.call(null, new cljs.core.PersistentArrayMap(null, 2, ["cell-red", 1, "cell-blue", 2], null))));
 grow_game.core.page_css = function() {
-  return garden.core.css.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div#grid", "div#grid", 1313629034), new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null, "display", "display", 2685668404), "block", new cljs.core.Keyword(null, "width", "width", 1127031096), [cljs.core.str(grow_game.core.grid_width), cljs.core.str("px")].join(""), new cljs.core.Keyword(null, "position", "position", 1761709211), "absolute", 
-  new cljs.core.Keyword(null, "border-top-style", "border-top-style", 1172693578), "solid", new cljs.core.Keyword(null, "border-left-style", "border-left-style", 4738074654), "solid", new cljs.core.Keyword(null, "border-width", "border-width", 1324275799), "1px"], null)], null), cljs.core.vec.call(null, cljs.core.concat.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.cell-empty", "div.cell-empty", 4393323025)], null), 
-  cljs.core.map.call(null, function(a) {
+  var a = (grow_game.core.cell_size - 8) / 2;
+  return garden.core.css.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "body", "body", 1016933652), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "text-align", "text-align", 1760136663), "center", new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), "#F1F2C0"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+  "div#grid", "div#grid", 1313629034), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "border-style", "border-style", 1320929346), "solid", new cljs.core.Keyword(null, "border-width", "border-width", 1324275799), "3px", new cljs.core.Keyword(null, "display", "display", 2685668404), "inline-block"], null)], null), cljs.core.vec.call(null, cljs.core.concat.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+  "div.cell-empty", "div.cell-empty", 4393323025)], null), cljs.core.map.call(null, function(a) {
     return cljs.core.keyword.call(null, [cljs.core.str("div."), cljs.core.str(a)].join(""));
-  }, cljs.core.keys.call(null, cljs.core.deref.call(null, grow_game.core.cell_vecs_by_class))), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null, "width", "width", 1127031096), [cljs.core.str(grow_game.core.cell_size), cljs.core.str("px")].join(""), new cljs.core.Keyword(null, "height", "height", 4087841945), [cljs.core.str(grow_game.core.cell_size), cljs.core.str("px")].join(""), new cljs.core.Keyword(null, 
-  "border-bottom-style", "border-bottom-style", 1985547010), "solid", new cljs.core.Keyword(null, "border-right-style", "border-right-style", 1447986705), "solid", new cljs.core.Keyword(null, "border-width", "border-width", 1324275799), "1px", new cljs.core.Keyword(null, "float", "float", 1111430606), "left"], null)], null))), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.cell-empty", "div.cell-empty", 4393323025), new cljs.core.PersistentArrayMap(null, 
-  1, [new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), "white"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.cell-red", "div.cell-red", 1459890645), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), "red"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
-  "div.cell-blue", "div.cell-blue", 1954111546), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), "blue"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.cell-green", "div.cell-green", 4395307975), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), "green"], null)], null));
+  }, cljs.core.keys.call(null, cljs.core.deref.call(null, grow_game.core.cell_vecs_by_class))), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null, "width", "width", 1127031096), [cljs.core.str(8), cljs.core.str("px")].join(""), new cljs.core.Keyword(null, "height", "height", 4087841945), [cljs.core.str(8), cljs.core.str("px")].join(""), new cljs.core.Keyword(null, "float", "float", 1111430606), 
+  "left", new cljs.core.Keyword(null, "border-style", "border-style", 1320929346), "solid", new cljs.core.Keyword(null, "border-width", "border-width", 1324275799), [cljs.core.str(a), cljs.core.str("px")].join(""), new cljs.core.Keyword(null, "border-color", "border-color", 1305991668), "#333333"], null)], null))), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.row", "div.row", 2686478959), new cljs.core.PersistentArrayMap(null, 
+  1, [new cljs.core.Keyword(null, "clear", "clear", 1108650431), "left"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.cell-empty", "div.cell-empty", 4393323025), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), "#333333"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+  "div.cell-red", "div.cell-red", 1459890645), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), "#BA3D15"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.cell-blue", "div.cell-blue", 1954111546), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), "#118C95"], null)], null), 
+  new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.cell-yellow", "div.cell-yellow", 3261739220), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), "#C9AD40"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.cell-wall", "div.cell-wall", 1954726314), new cljs.core.PersistentArrayMap(null, 
+  2, [new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), "#000000", new cljs.core.Keyword(null, "border-color", "border-color", 1305991668), "#000000"], null)], null));
 };
 grow_game.core.set_page_style_BANG_ = function(a) {
   return cljs.core.first.call(null, cljs.core.array_seq.call(null, document.head.getElementsByTagName("style"))).innerHTML = a;
 };
 grow_game.core.set_cell_BANG_ = function(a, b) {
-  var c = cljs.core.deref.call(null, grow_game.core.all_cells).call(null, a), d = c.className;
-  c.className = b;
-  cljs.core.swap_BANG_.call(null, grow_game.core.cell_vecs_by_class, function(b) {
-    return cljs.core.update_in.call(null, b, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [d], null), function(b) {
-      return cljs.core.disj.call(null, b, a);
+  var c = cljs.core.deref.call(null, grow_game.core.all_cells).call(null, a);
+  if (cljs.core.truth_(c)) {
+    var d = c.className;
+    c.className = b;
+    cljs.core.not_EQ_.call(null, d, "") && cljs.core.swap_BANG_.call(null, grow_game.core.cell_vecs_by_class, function(b) {
+      return cljs.core.update_in.call(null, b, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [d], null), function(b) {
+        return cljs.core.disj.call(null, b, a);
+      });
     });
-  });
-  cljs.core.swap_BANG_.call(null, grow_game.core.cell_vecs_by_class, function(c) {
-    return cljs.core.update_in.call(null, c, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [b], null), function(b) {
-      return cljs.core.conj.call(null, b, a);
+    return cljs.core.swap_BANG_.call(null, grow_game.core.cell_vecs_by_class, function(c) {
+      return cljs.core.update_in.call(null, c, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [b], null), function(b) {
+        return cljs.core.conj.call(null, b, a);
+      });
     });
-  });
+  }
+  return null;
+};
+grow_game.core.set_cell_and_grow_BANG_ = function(a, b) {
+  grow_game.core.set_cell_BANG_.call(null, a, b);
   return grow_game.core.add_to_grow_queue_BANG_.call(null, a);
 };
 grow_game.core.id__GT_vector = function(a) {
   return cljs.core.vec.call(null, cljs.core.map.call(null, cljs.reader.read_string, clojure.string.split.call(null, a, /-/)));
 };
-grow_game.core.vector__GT_id = function(a) {
-  return cljs.core.vec.call(null, cljs.core.map.call(null, cljs.reader.read_string, clojure.string.join.call(null, "-", a)));
-};
-grow_game.core.adjacent_relative_vecs = new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [1, 0], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, 1], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [-1, 0], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, 
--1], null)], null);
-grow_game.core.adjacent_different_vecs = function(a, b) {
-  return cljs.core.filter.call(null, function(a) {
-    var b = cljs.core.deref.call(null, grow_game.core.cell_vecs_by_class).call(null, "cell-empty").call(null, a);
-    return cljs.core.truth_(b) ? cljs.core.deref.call(null, grow_game.core.all_cells).call(null, a) : b;
-  }, function() {
-    return function d(b) {
+grow_game.core.adjacent_empty_vecs = function(a, b) {
+  var c = function() {
+    return function f(b) {
       return new cljs.core.LazySeq(null, function() {
         for (;;) {
-          var f = cljs.core.seq.call(null, b);
-          if (f) {
-            if (cljs.core.chunked_seq_QMARK_.call(null, f)) {
-              var g = cljs.core.chunk_first.call(null, f), h = cljs.core.count.call(null, g), k = cljs.core.chunk_buffer.call(null, h);
+          var c = cljs.core.seq.call(null, b);
+          if (c) {
+            if (cljs.core.chunked_seq_QMARK_.call(null, c)) {
+              var d = cljs.core.chunk_first.call(null, c), l = cljs.core.count.call(null, d), m = cljs.core.chunk_buffer.call(null, l);
               a: {
-                for (var l = 0;;) {
-                  if (l < h) {
-                    var m = cljs.core._nth.call(null, g, l);
-                    cljs.core.chunk_append.call(null, k, cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, a, m)));
-                    l += 1;
+                for (var n = 0;;) {
+                  if (n < l) {
+                    var p = cljs.core._nth.call(null, d, n);
+                    cljs.core.chunk_append.call(null, m, cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, a, p)));
+                    n += 1;
                   } else {
-                    g = !0;
+                    d = !0;
                     break a;
                   }
                 }
-                g = void 0;
+                d = void 0;
               }
-              return g ? cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, k), d.call(null, cljs.core.chunk_rest.call(null, f))) : cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, k), null);
+              return d ? cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, m), f.call(null, cljs.core.chunk_rest.call(null, c))) : cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, m), null);
             }
-            k = cljs.core.first.call(null, f);
-            return cljs.core.cons.call(null, cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, a, k)), d.call(null, cljs.core.rest.call(null, f)));
+            m = cljs.core.first.call(null, c);
+            return cljs.core.cons.call(null, cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, a, m)), f.call(null, cljs.core.rest.call(null, c)));
           }
           return null;
         }
       }, null, null);
-    }.call(null, grow_game.core.adjacent_relative_vecs);
-  }());
-};
-grow_game.core.add_to_grow_queue_BANG_ = function(a) {
-  return cljs.core.swap_BANG_.call(null, grow_game.core.cells_to_grow, function(b) {
-    return cljs.core.conj.call(null, b, a);
-  });
+    }.call(null, new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [1, 0], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, 1], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [-1, 0], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, -1], null)], null));
+  }(), d = function(a) {
+    return function(a) {
+      return cljs.core.deref.call(null, grow_game.core.cell_vecs_by_class).call(null, "cell-empty").call(null, a);
+    };
+  }(c);
+  return cljs.core.filter.call(null, d, c);
 };
 grow_game.core.fill_adjacent_cells_BANG_ = function(a, b) {
-  for (var c = cljs.core.seq.call(null, grow_game.core.adjacent_different_vecs.call(null, a, b)), d = null, e = 0, f = 0;;) {
+  for (var c = cljs.core.seq.call(null, grow_game.core.adjacent_empty_vecs.call(null, a, b)), d = null, e = 0, f = 0;;) {
     if (f < e) {
       var g = cljs.core._nth.call(null, d, f);
-      grow_game.core.set_cell_BANG_.call(null, g, b);
+      grow_game.core.set_cell_and_grow_BANG_.call(null, g, b);
       f += 1;
     } else {
       if (c = cljs.core.seq.call(null, c)) {
-        d = c, cljs.core.chunked_seq_QMARK_.call(null, d) ? (c = cljs.core.chunk_first.call(null, d), e = cljs.core.chunk_rest.call(null, d), d = c, g = cljs.core.count.call(null, c), c = e, e = g) : (g = cljs.core.first.call(null, d), grow_game.core.set_cell_BANG_.call(null, g, b), c = cljs.core.next.call(null, d), d = null, e = 0), f = 0;
+        d = c, cljs.core.chunked_seq_QMARK_.call(null, d) ? (c = cljs.core.chunk_first.call(null, d), e = cljs.core.chunk_rest.call(null, d), d = c, g = cljs.core.count.call(null, c), c = e, e = g) : (g = cljs.core.first.call(null, d), grow_game.core.set_cell_and_grow_BANG_.call(null, g, b), c = cljs.core.next.call(null, d), d = null, e = 0), f = 0;
       } else {
         return null;
       }
@@ -22846,15 +22844,38 @@ grow_game.core.grow_cells_BANG_ = function(a) {
   }
 };
 grow_game.core.tick_BANG_ = function() {
-  var a = (new Date).getTime(), b;
-  b = cljs.core.deref.call(null, grow_game.core.cells_to_grow);
-  cljs.core.reset_BANG_.call(null, grow_game.core.cells_to_grow, cljs.core.PersistentHashSet.EMPTY);
-  b = grow_game.core.grow_cells_BANG_.call(null, b);
-  cljs.core.prn.call(null, [cljs.core.str("Elapsed time: "), cljs.core.str((new Date).getTime() - a), cljs.core.str(" msecs")].join(""));
-  return b;
+  var a = cljs.core.deref.call(null, grow_game.core.grow_queue);
+  grow_game.core.clear_grow_queue_BANG_.call(null);
+  return grow_game.core.grow_cells_BANG_.call(null, a);
 };
 grow_game.core.cell_click = function(a) {
-  return grow_game.core.set_cell_BANG_.call(null, a, "cell-red");
+  return cljs.core.truth_(cljs.core.deref.call(null, grow_game.core.cell_vecs_by_class).call(null, "cell-empty").call(null, a)) ? grow_game.core.set_cell_and_grow_BANG_.call(null, a, "cell-red") : null;
+};
+grow_game.core.set_cells_empty_BANG_ = function() {
+  for (var a = cljs.core.seq.call(null, cljs.core.keys.call(null, cljs.core.deref.call(null, grow_game.core.all_cells))), b = null, c = 0, d = 0;;) {
+    if (d < c) {
+      var e = cljs.core._nth.call(null, b, d);
+      grow_game.core.set_cell_BANG_.call(null, e, "cell-empty");
+      d += 1;
+    } else {
+      if (a = cljs.core.seq.call(null, a)) {
+        b = a, cljs.core.chunked_seq_QMARK_.call(null, b) ? (a = cljs.core.chunk_first.call(null, b), c = cljs.core.chunk_rest.call(null, b), b = a, e = cljs.core.count.call(null, a), a = c, c = e) : (e = cljs.core.first.call(null, b), grow_game.core.set_cell_BANG_.call(null, e, "cell-empty"), a = cljs.core.next.call(null, b), b = null, c = 0), d = 0;
+      } else {
+        return null;
+      }
+    }
+  }
+};
+grow_game.core.set_all_cells_BANG_ = function() {
+  cljs.core.reset_BANG_.call(null, grow_game.core.all_cells, function() {
+    var a = cljs.core.mapcat.call(null, function(a) {
+      return cljs.core.array_seq.call(null, goog.dom.getChildren(a));
+    }, cljs.core.array_seq.call(null, goog.dom.getElementsByClass("row")));
+    return cljs.core.zipmap.call(null, cljs.core.map.call(null, function(a) {
+      return grow_game.core.id__GT_vector.call(null, a.id);
+    }, a), a);
+  }());
+  return grow_game.core.set_cells_empty_BANG_.call(null);
 };
 grow_game.core.set_cells_click_BANG_ = function() {
   for (var a = cljs.core.seq.call(null, cljs.core.vals.call(null, cljs.core.deref.call(null, grow_game.core.all_cells))), b = null, c = 0, d = 0;;) {
@@ -22895,31 +22916,200 @@ grow_game.core.start_timer = function() {
   a.start();
   return goog.events.listen(a, goog.Timer.TICK, grow_game.core.tick_BANG_);
 };
-grow_game.core.start = function() {
-  document.body.innerHTML = grow_game.core.grid.call(null, grow_game.core.grid_rows, grow_game.core.grid_cols);
-  var a = cljs.core.mapcat.call(null, function(a) {
-    return cljs.core.array_seq.call(null, goog.dom.getChildren(a));
-  }, cljs.core.array_seq.call(null, goog.dom.getElementsByClass("row")));
-  cljs.core.reset_BANG_.call(null, grow_game.core.all_cells, cljs.core.zipmap.call(null, cljs.core.map.call(null, function(a) {
-    return grow_game.core.id__GT_vector.call(null, a.id);
-  }, a), a));
-  for (var a = cljs.core.seq.call(null, cljs.core.keys.call(null, cljs.core.deref.call(null, grow_game.core.all_cells))), b = null, c = 0, d = 0;;) {
+grow_game.core.random_empty_vec = function() {
+  return cljs.core.rand_nth.call(null, cljs.core.seq.call(null, cljs.core.deref.call(null, grow_game.core.cell_vecs_by_class).call(null, "cell-empty")));
+};
+grow_game.core.on_load = function() {
+  grow_game.core.set_page_style_BANG_.call(null, grow_game.core.page_css.call(null));
+  document.body.innerHTML = "" + cljs.core.str(hiccups.runtime.render_html.call(null, grow_game.core.grid.call(null, grow_game.core.grid_rows, grow_game.core.grid_cols)));
+  grow_game.core.set_all_cells_BANG_.call(null);
+  for (var a = cljs.core.seq.call(null, cljs.core.take.call(null, 10, cljs.core.shuffle.call(null, cljs.core.keys.call(null, cljs.core.deref.call(null, grow_game.core.all_cells))))), b = null, c = 0, d = 0;;) {
     if (d < c) {
-      var e = cljs.core._nth.call(null, b, d);
-      grow_game.core.set_cell_BANG_.call(null, e, "cell-empty");
+      for (var e = cljs.core._nth.call(null, b, d), f = cljs.core.seq.call(null, new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [1, 0], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, 1], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [-1, 0], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, 
+      [0, -1], null)], null)), g = null, h = 0, k = 0;;) {
+        if (k < h) {
+          for (var l = cljs.core._nth.call(null, g, k), m = cljs.core.seq.call(null, cljs.core.range.call(null, 10)), n = null, p = 0, q = 0;;) {
+            if (q < p) {
+              var r = cljs.core._nth.call(null, n, q), r = cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, e, cljs.core.map.call(null, function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r) {
+                return function(a) {
+                  return a * p;
+                };
+              }(m, n, p, q, f, g, h, k, a, b, c, d, r, l, e), l)));
+              grow_game.core.set_cell_BANG_.call(null, r, "cell-wall");
+              q += 1;
+            } else {
+              var s = cljs.core.seq.call(null, m);
+              if (s) {
+                r = s;
+                if (cljs.core.chunked_seq_QMARK_.call(null, r)) {
+                  m = cljs.core.chunk_first.call(null, r), q = cljs.core.chunk_rest.call(null, r), n = m, p = cljs.core.count.call(null, m), m = q;
+                } else {
+                  var t = cljs.core.first.call(null, r), m = cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, e, cljs.core.map.call(null, function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t) {
+                    return function(a) {
+                      return a * p;
+                    };
+                  }(m, n, p, q, f, g, h, k, a, b, c, d, t, r, s, l, e), l)));
+                  grow_game.core.set_cell_BANG_.call(null, m, "cell-wall");
+                  m = cljs.core.next.call(null, r);
+                  n = null;
+                  p = 0;
+                }
+                q = 0;
+              } else {
+                break;
+              }
+            }
+          }
+          k += 1;
+        } else {
+          if (m = cljs.core.seq.call(null, f)) {
+            l = m;
+            if (cljs.core.chunked_seq_QMARK_.call(null, l)) {
+              f = cljs.core.chunk_first.call(null, l), k = cljs.core.chunk_rest.call(null, l), g = f, h = cljs.core.count.call(null, f), f = k;
+            } else {
+              n = cljs.core.first.call(null, l);
+              p = cljs.core.seq.call(null, cljs.core.range.call(null, 10));
+              q = null;
+              for (s = r = 0;;) {
+                if (s < r) {
+                  t = cljs.core._nth.call(null, q, s), t = cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, e, cljs.core.map.call(null, function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t) {
+                    return function(a) {
+                      return a * p;
+                    };
+                  }(p, q, r, s, f, g, h, k, a, b, c, d, t, n, l, m, e), n))), grow_game.core.set_cell_BANG_.call(null, t, "cell-wall"), s += 1;
+                } else {
+                  var u = cljs.core.seq.call(null, p);
+                  if (u) {
+                    t = u;
+                    if (cljs.core.chunked_seq_QMARK_.call(null, t)) {
+                      p = cljs.core.chunk_first.call(null, t), s = cljs.core.chunk_rest.call(null, t), q = p, r = cljs.core.count.call(null, p), p = s;
+                    } else {
+                      var v = cljs.core.first.call(null, t), p = cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, e, cljs.core.map.call(null, function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, v) {
+                        return function(a) {
+                          return a * p;
+                        };
+                      }(p, q, r, s, f, g, h, k, a, b, c, d, v, t, u, n, l, m, e), n)));
+                      grow_game.core.set_cell_BANG_.call(null, p, "cell-wall");
+                      p = cljs.core.next.call(null, t);
+                      q = null;
+                      r = 0;
+                    }
+                    s = 0;
+                  } else {
+                    break;
+                  }
+                }
+              }
+              f = cljs.core.next.call(null, l);
+              g = null;
+              h = 0;
+            }
+            k = 0;
+          } else {
+            break;
+          }
+        }
+      }
       d += 1;
     } else {
-      if (a = cljs.core.seq.call(null, a)) {
-        b = a, cljs.core.chunked_seq_QMARK_.call(null, b) ? (a = cljs.core.chunk_first.call(null, b), d = cljs.core.chunk_rest.call(null, b), b = a, c = cljs.core.count.call(null, a), a = d) : (a = cljs.core.first.call(null, b), grow_game.core.set_cell_BANG_.call(null, a, "cell-empty"), a = cljs.core.next.call(null, b), b = null, c = 0), d = 0;
+      if (f = cljs.core.seq.call(null, a)) {
+        e = f;
+        if (cljs.core.chunked_seq_QMARK_.call(null, e)) {
+          a = cljs.core.chunk_first.call(null, e), d = cljs.core.chunk_rest.call(null, e), b = a, c = cljs.core.count.call(null, a), a = d;
+        } else {
+          g = cljs.core.first.call(null, e);
+          h = cljs.core.seq.call(null, new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [1, 0], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, 1], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [-1, 0], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, -1], 
+          null)], null));
+          k = null;
+          for (m = l = 0;;) {
+            if (m < l) {
+              n = cljs.core._nth.call(null, k, m);
+              p = cljs.core.seq.call(null, cljs.core.range.call(null, 10));
+              q = null;
+              for (s = r = 0;;) {
+                if (s < r) {
+                  t = cljs.core._nth.call(null, q, s), t = cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, g, cljs.core.map.call(null, function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t) {
+                    return function(a) {
+                      return a * p;
+                    };
+                  }(p, q, r, s, h, k, l, m, a, b, c, d, t, n, g, e, f), n))), grow_game.core.set_cell_BANG_.call(null, t, "cell-wall"), s += 1;
+                } else {
+                  if (u = cljs.core.seq.call(null, p)) {
+                    t = u, cljs.core.chunked_seq_QMARK_.call(null, t) ? (p = cljs.core.chunk_first.call(null, t), s = cljs.core.chunk_rest.call(null, t), q = p, r = cljs.core.count.call(null, p), p = s) : (v = cljs.core.first.call(null, t), p = cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, g, cljs.core.map.call(null, function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, v) {
+                      return function(a) {
+                        return a * p;
+                      };
+                    }(p, q, r, s, h, k, l, m, a, b, c, d, v, t, u, n, g, e, f), n))), grow_game.core.set_cell_BANG_.call(null, p, "cell-wall"), p = cljs.core.next.call(null, t), q = null, r = 0), s = 0;
+                  } else {
+                    break;
+                  }
+                }
+              }
+              m += 1;
+            } else {
+              if (p = cljs.core.seq.call(null, h)) {
+                n = p;
+                if (cljs.core.chunked_seq_QMARK_.call(null, n)) {
+                  h = cljs.core.chunk_first.call(null, n), m = cljs.core.chunk_rest.call(null, n), k = h, l = cljs.core.count.call(null, h), h = m;
+                } else {
+                  q = cljs.core.first.call(null, n);
+                  r = cljs.core.seq.call(null, cljs.core.range.call(null, 10));
+                  s = null;
+                  for (u = t = 0;;) {
+                    if (u < t) {
+                      v = cljs.core._nth.call(null, s, u), v = cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, g, cljs.core.map.call(null, function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, v) {
+                        return function(a) {
+                          return a * p;
+                        };
+                      }(r, s, t, u, h, k, l, m, a, b, c, d, v, q, n, p, g, e, f), q))), grow_game.core.set_cell_BANG_.call(null, v, "cell-wall"), u += 1;
+                    } else {
+                      var w = cljs.core.seq.call(null, r);
+                      if (w) {
+                        v = w;
+                        if (cljs.core.chunked_seq_QMARK_.call(null, v)) {
+                          r = cljs.core.chunk_first.call(null, v), u = cljs.core.chunk_rest.call(null, v), s = r, t = cljs.core.count.call(null, r), r = u;
+                        } else {
+                          var y = cljs.core.first.call(null, v), r = cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core._PLUS_, g, cljs.core.map.call(null, function(a, b, c, d, e, f, g, h, k, l, m, n, p, q, r, s, t, u, v, w, y) {
+                            return function(a) {
+                              return a * p;
+                            };
+                          }(r, s, t, u, h, k, l, m, a, b, c, d, y, v, w, q, n, p, g, e, f), q)));
+                          grow_game.core.set_cell_BANG_.call(null, r, "cell-wall");
+                          r = cljs.core.next.call(null, v);
+                          s = null;
+                          t = 0;
+                        }
+                        u = 0;
+                      } else {
+                        break;
+                      }
+                    }
+                  }
+                  h = cljs.core.next.call(null, n);
+                  k = null;
+                  l = 0;
+                }
+                m = 0;
+              } else {
+                break;
+              }
+            }
+          }
+          a = cljs.core.next.call(null, e);
+          b = null;
+          c = 0;
+        }
+        d = 0;
       } else {
         break;
       }
     }
   }
-  grow_game.core.set_cell_BANG_.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, 0], null), "cell-blue");
-  grow_game.core.set_cell_BANG_.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [grow_game.core.grid_rows - 1, grow_game.core.grid_cols - 1], null), "cell-green");
+  grow_game.core.set_cell_and_grow_BANG_.call(null, grow_game.core.random_empty_vec.call(null), "cell-blue");
+  grow_game.core.set_cell_and_grow_BANG_.call(null, grow_game.core.random_empty_vec.call(null), "cell-blue");
+  grow_game.core.set_cell_and_grow_BANG_.call(null, grow_game.core.random_empty_vec.call(null), "cell-yellow");
+  grow_game.core.set_cell_and_grow_BANG_.call(null, grow_game.core.random_empty_vec.call(null), "cell-yellow");
   grow_game.core.set_cells_click_BANG_.call(null);
-  grow_game.core.set_page_style_BANG_.call(null, grow_game.core.page_css.call(null));
   return grow_game.core.start_timer.call(null);
 };
-window.onload = grow_game.core.start;
+window.onload = grow_game.core.on_load;
