@@ -26,21 +26,22 @@
 (def timer (atom (goog.Timer.)))
 (def chart-div (atom nil))
 (def current-speed-idx (atom 0))
-(def speed-div (atom nil))
+(def speed-label-div (atom nil))
 (def clicks-remaining (atom nil))
 (def clicks-remaining-div (atom nil))
 
 (def speeds [{:name "1.0x" :interval 500}
-             {:name "1.5x" :interval 350}
-             {:name "2.0x" :interval 200}])
+             {:name "1.5x" :interval (/ 500 1.5)}
+             {:name "2.0x" :interval (/ 500 2.0)}
+             {:name "3.0x" :interval (/ 500 3.0)}])
 
 (defn set-speed! [speed-idx]
   (if-let [new-speed (get speeds speed-idx)]
     (do
       (reset! current-speed-idx speed-idx)
       (. @timer setInterval (new-speed :interval))
-      (set! (.-innerHTML @speed-div)
-            (str "Speed: " (new-speed :name) " (Left and Right arrow keys)")))))
+      (set! (.-innerHTML @speed-label-div)
+               (str (new-speed :name))))))
 
 (defn change-speed! [direction-fn]
   (set-speed! (direction-fn @current-speed-idx 1)))
@@ -72,7 +73,7 @@
 (defn count-cell-class? [cell-class]
   ((cell-classes cell-class) :show-count))
 
-(defn page-body []
+(def page-body
   (hiccups/html
     (grid grid-rows grid-cols)
     [:div#game-info
@@ -81,9 +82,13 @@
                   [(keyword (str "div#" cell-class "-count" "." "cell-count"))])
                 (filter count-cell-class?
                         (keys cell-classes))))
-     [:div#speed]
+     [:div#speed
+      [:div "Speed (Left and Right arrow keys)"]
+      [:button#decrease-speed-button "-"]
+      [:div#speed-label]
+      [:button#increase-speed-button "+"]]
      [:div#clicks-remaining]
-     [:div [:button#restart-button "Restart"]]]))
+     [:div [:button#restart-button "Restart (R)"]]]))
 
 (defn get-cell-class [cell-vec]
   (when-let [kv (first (filter (fn [kv] ((val kv) cell-vec))
@@ -98,7 +103,6 @@
                    :font-family "Helvetica"}]
            [:div#grid {:border-style "solid"
                        :border-width "3px"
-                       :display "inline-block"
                        :float "left"}]
            (into (vec (map #(keyword (str "div." %))
                            (keys cell-classes)))
@@ -112,10 +116,15 @@
            [:div#game-info {:padding "10px"
                             :display "inline-block"
                             :width "200px"}]
+           [:div#game-info>* {:clear "left"
+                              :margin-bottom "20px"
+                              :overflow "hidden"}]
            [:div#chart {:width (str chart-width "px")
                         :background-color empty-colour
                         :border-style "solid"
                         :border-width "3px"}]
+           [:div#speed>* {:float "left"}]
+           [:div#about {:clear "left"}]
            (into
              (map (fn [cell-class]
                     [(keyword (str "div." (key cell-class)))
@@ -245,28 +254,26 @@
   (doseq [cell-class (take 4 (cycle ["cell-blue" "cell-yellow"]))]
     (set-cell-and-grow! (random-empty-vec) cell-class)))
 
-(defn speed-hotkey-handler [event]
-  (let [key (.-key event)]
+(defn key-handler [event]
+  (let [key-code (.-keyCode event)]
     (cond
-      (= key "Right") (change-speed! +)
-      (= key "Left")  (change-speed! -))))
-
-(defn set-speed-hotkeys! []
-  (set! (-> js/document .-body .-onkeypress)
-        speed-hotkey-handler))
+      (= key-code 39) (change-speed! +) ;left
+      (= key-code 37) (change-speed! -) ;right
+      (= key-code 82) (start-game!)))) ;R
 
 (defn on-load []
   (set-page-style! (page-css))
-  (set! (-> js/document .-body .-innerHTML) (page-body))
+  (set! (.-innerHTML (goog.dom/getElement "game")) page-body)
   (set-all-cells!)
   (set-cells-click!)
   (reset! chart-div (goog.dom/getElement "chart"))
-  (reset! speed-div (goog.dom/getElement "speed"))
+  (reset! speed-label-div (goog.dom/getElement "speed-label"))
   (reset! clicks-remaining-div (goog.dom/getElement "clicks-remaining"))
-  (let [button (goog.dom/getElement "restart-button")]
-    (set! (.-onclick button) start-game!))
+  (set! (.-onclick (goog.dom/getElement "decrease-speed-button")) #(change-speed! -))
+  (set! (.-onclick (goog.dom/getElement "increase-speed-button")) #(change-speed! +))
+  (set! (.-onclick (goog.dom/getElement "restart-button")) start-game!)
+  (set! (-> js/document .-onkeydown) key-handler)
   (start-timer)
-  (set-speed-hotkeys!)
   (start-game!))
 
 (set! (.-onload js/window) on-load)
