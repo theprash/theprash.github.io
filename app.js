@@ -22706,14 +22706,14 @@ grow_game.core.grow_queue = cljs.core.atom.call(null, cljs.core.PersistentHashSe
 grow_game.core.timer = cljs.core.atom.call(null, new goog.Timer);
 grow_game.core.chart_div = cljs.core.atom.call(null, null);
 grow_game.core.current_speed_idx = cljs.core.atom.call(null, 0);
-grow_game.core.speed_div = cljs.core.atom.call(null, null);
+grow_game.core.speed_label_div = cljs.core.atom.call(null, null);
 grow_game.core.clicks_remaining = cljs.core.atom.call(null, null);
 grow_game.core.clicks_remaining_div = cljs.core.atom.call(null, null);
-grow_game.core.speeds = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "name", "name", 1017277949), "1.0x", new cljs.core.Keyword(null, "interval", "interval", 1584322615), 500], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "name", "name", 1017277949), "1.5x", new cljs.core.Keyword(null, "interval", "interval", 1584322615), 350], null), new cljs.core.PersistentArrayMap(null, 
-2, [new cljs.core.Keyword(null, "name", "name", 1017277949), "2.0x", new cljs.core.Keyword(null, "interval", "interval", 1584322615), 200], null)], null);
+grow_game.core.speeds = new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "name", "name", 1017277949), "1.0x", new cljs.core.Keyword(null, "interval", "interval", 1584322615), 500], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "name", "name", 1017277949), "1.5x", new cljs.core.Keyword(null, "interval", "interval", 1584322615), 500 / 1.5], null), new cljs.core.PersistentArrayMap(null, 
+2, [new cljs.core.Keyword(null, "name", "name", 1017277949), "2.0x", new cljs.core.Keyword(null, "interval", "interval", 1584322615), 250], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "name", "name", 1017277949), "3.0x", new cljs.core.Keyword(null, "interval", "interval", 1584322615), 500 / 3], null)], null);
 grow_game.core.set_speed_BANG_ = function(a) {
   var b = cljs.core.get.call(null, grow_game.core.speeds, a);
-  return cljs.core.truth_(b) ? (cljs.core.reset_BANG_.call(null, grow_game.core.current_speed_idx, a), cljs.core.deref.call(null, grow_game.core.timer).setInterval(b.call(null, new cljs.core.Keyword(null, "interval", "interval", 1584322615))), cljs.core.deref.call(null, grow_game.core.speed_div).innerHTML = [cljs.core.str("Speed: "), cljs.core.str(b.call(null, new cljs.core.Keyword(null, "name", "name", 1017277949))), cljs.core.str(" (Left and Right arrow keys)")].join("")) : null;
+  return cljs.core.truth_(b) ? (cljs.core.reset_BANG_.call(null, grow_game.core.current_speed_idx, a), cljs.core.deref.call(null, grow_game.core.timer).setInterval(b.call(null, new cljs.core.Keyword(null, "interval", "interval", 1584322615))), cljs.core.deref.call(null, grow_game.core.speed_label_div).innerHTML = "" + cljs.core.str(b.call(null, new cljs.core.Keyword(null, "name", "name", 1017277949)))) : null;
 };
 grow_game.core.change_speed_BANG_ = function(a) {
   return grow_game.core.set_speed_BANG_.call(null, a.call(null, cljs.core.deref.call(null, grow_game.core.current_speed_idx), 1));
@@ -22748,15 +22748,14 @@ grow_game.core.chart_width = 200;
 grow_game.core.count_cell_class_QMARK_ = function(a) {
   return grow_game.core.cell_classes.call(null, a).call(null, new cljs.core.Keyword(null, "show-count", "show-count", 693322161));
 };
-grow_game.core.page_body = function() {
-  return[cljs.core.str(hiccups.runtime.render_html.call(null, grow_game.core.grid.call(null, grow_game.core.grid_rows, grow_game.core.grid_cols))), cljs.core.str(function() {
-    var a = cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div#chart", "div#chart", 1711439070)], null), cljs.core.map.call(null, function(a) {
-      return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.keyword.call(null, [cljs.core.str("div#"), cljs.core.str(a), cljs.core.str("-count"), cljs.core.str("."), cljs.core.str("cell-count")].join(""))], null);
-    }, cljs.core.filter.call(null, grow_game.core.count_cell_class_QMARK_, cljs.core.keys.call(null, grow_game.core.cell_classes))));
-    return cljs.core.map_QMARK_.call(null, a) ? [cljs.core.str("\x3cdiv"), cljs.core.str(hiccups.runtime.render_attr_map.call(null, cljs.core.merge.call(null, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "id", "id", 1013907597), "game-info", new cljs.core.Keyword(null, "class", "class", 1108647146), null], null), a))), cljs.core.str("\x3e"), cljs.core.str('\x3cdiv id\x3d"speed"\x3e\x3c/div\x3e'), cljs.core.str('\x3cdiv id\x3d"clicks-remaining"\x3e\x3c/div\x3e'), cljs.core.str('\x3cdiv\x3e\x3cbutton id\x3d"restart-button"\x3eRestart\x3c/button\x3e\x3c/div\x3e'), 
-    cljs.core.str("\x3c/div\x3e")].join("") : [cljs.core.str('\x3cdiv id\x3d"game-info"\x3e'), cljs.core.str(hiccups.runtime.render_html.call(null, a)), cljs.core.str('\x3cdiv id\x3d"speed"\x3e\x3c/div\x3e'), cljs.core.str('\x3cdiv id\x3d"clicks-remaining"\x3e\x3c/div\x3e'), cljs.core.str('\x3cdiv\x3e\x3cbutton id\x3d"restart-button"\x3eRestart\x3c/button\x3e\x3c/div\x3e'), cljs.core.str("\x3c/div\x3e")].join("");
-  }())].join("");
-};
+grow_game.core.page_body = [cljs.core.str(hiccups.runtime.render_html.call(null, grow_game.core.grid.call(null, grow_game.core.grid_rows, grow_game.core.grid_cols))), cljs.core.str(function() {
+  var a = cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div#chart", "div#chart", 1711439070)], null), cljs.core.map.call(null, function(a) {
+    return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.keyword.call(null, [cljs.core.str("div#"), cljs.core.str(a), cljs.core.str("-count"), cljs.core.str("."), cljs.core.str("cell-count")].join(""))], null);
+  }, cljs.core.filter.call(null, grow_game.core.count_cell_class_QMARK_, cljs.core.keys.call(null, grow_game.core.cell_classes))));
+  return cljs.core.map_QMARK_.call(null, a) ? [cljs.core.str("\x3cdiv"), cljs.core.str(hiccups.runtime.render_attr_map.call(null, cljs.core.merge.call(null, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "id", "id", 1013907597), "game-info", new cljs.core.Keyword(null, "class", "class", 1108647146), null], null), a))), cljs.core.str("\x3e"), cljs.core.str('\x3cdiv id\x3d"speed"\x3e\x3cdiv\x3eSpeed (Left and Right arrow keys)\x3c/div\x3e\x3cbutton id\x3d"decrease-speed-button"\x3e-\x3c/button\x3e\x3cdiv id\x3d"speed-label"\x3e\x3c/div\x3e\x3cbutton id\x3d"increase-speed-button"\x3e+\x3c/button\x3e\x3c/div\x3e'), 
+  cljs.core.str('\x3cdiv id\x3d"clicks-remaining"\x3e\x3c/div\x3e'), cljs.core.str('\x3cdiv\x3e\x3cbutton id\x3d"restart-button"\x3eRestart (R)\x3c/button\x3e\x3c/div\x3e'), cljs.core.str("\x3c/div\x3e")].join("") : [cljs.core.str('\x3cdiv id\x3d"game-info"\x3e'), cljs.core.str(hiccups.runtime.render_html.call(null, a)), cljs.core.str('\x3cdiv id\x3d"speed"\x3e\x3cdiv\x3eSpeed (Left and Right arrow keys)\x3c/div\x3e\x3cbutton id\x3d"decrease-speed-button"\x3e-\x3c/button\x3e\x3cdiv id\x3d"speed-label"\x3e\x3c/div\x3e\x3cbutton id\x3d"increase-speed-button"\x3e+\x3c/button\x3e\x3c/div\x3e'), 
+  cljs.core.str('\x3cdiv id\x3d"clicks-remaining"\x3e\x3c/div\x3e'), cljs.core.str('\x3cdiv\x3e\x3cbutton id\x3d"restart-button"\x3eRestart (R)\x3c/button\x3e\x3c/div\x3e'), cljs.core.str("\x3c/div\x3e")].join("");
+}())].join("");
 grow_game.core.get_cell_class = function(a) {
   var b = cljs.core.first.call(null, cljs.core.filter.call(null, function(b) {
     return cljs.core.val.call(null, b).call(null, a);
@@ -22766,14 +22765,15 @@ grow_game.core.get_cell_class = function(a) {
 grow_game.core.page_css = function() {
   var a = (grow_game.core.cell_size - 8) / 2;
   return cljs.core.apply.call(null, garden.core.css, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "body", "body", 1016933652), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), "#F1F2C0", new cljs.core.Keyword(null, "font-family", "font-family", 1122436628), "Helvetica"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, 
-  [new cljs.core.Keyword(null, "div#grid", "div#grid", 1313629034), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "border-style", "border-style", 1320929346), "solid", new cljs.core.Keyword(null, "border-width", "border-width", 1324275799), "3px", new cljs.core.Keyword(null, "display", "display", 2685668404), "inline-block", new cljs.core.Keyword(null, "float", "float", 1111430606), "left"], null)], null), cljs.core.into.call(null, cljs.core.vec.call(null, cljs.core.map.call(null, 
-  function(a) {
+  [new cljs.core.Keyword(null, "div#grid", "div#grid", 1313629034), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "border-style", "border-style", 1320929346), "solid", new cljs.core.Keyword(null, "border-width", "border-width", 1324275799), "3px", new cljs.core.Keyword(null, "float", "float", 1111430606), "left"], null)], null), cljs.core.into.call(null, cljs.core.vec.call(null, cljs.core.map.call(null, function(a) {
     return cljs.core.keyword.call(null, [cljs.core.str("div."), cljs.core.str(a)].join(""));
   }, cljs.core.keys.call(null, grow_game.core.cell_classes))), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null, "width", "width", 1127031096), [cljs.core.str(8), cljs.core.str("px")].join(""), new cljs.core.Keyword(null, "height", "height", 4087841945), [cljs.core.str(8), cljs.core.str("px")].join(""), new cljs.core.Keyword(null, "float", "float", 1111430606), "left", new cljs.core.Keyword(null, 
   "border-style", "border-style", 1320929346), "solid", new cljs.core.Keyword(null, "border-width", "border-width", 1324275799), [cljs.core.str(a), cljs.core.str("px")].join(""), new cljs.core.Keyword(null, "border-color", "border-color", 1305991668), grow_game.core.empty_colour], null)], null)), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.row", "div.row", 2686478959), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, 
   "clear", "clear", 1108650431), "left"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div#game-info", "div#game-info", 3486912425), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "padding", "padding", 4502531971), "10px", new cljs.core.Keyword(null, "display", "display", 2685668404), "inline-block", new cljs.core.Keyword(null, "width", "width", 1127031096), "200px"], null)], null), new cljs.core.PersistentVector(null, 
-  2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div#chart", "div#chart", 1711439070), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "width", "width", 1127031096), [cljs.core.str(grow_game.core.chart_width), cljs.core.str("px")].join(""), new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), grow_game.core.empty_colour, new cljs.core.Keyword(null, "border-style", "border-style", 1320929346), "solid", new cljs.core.Keyword(null, 
-  "border-width", "border-width", 1324275799), "3px"], null)], null), cljs.core.into.call(null, cljs.core.map.call(null, function(a) {
+  2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div#game-info\x3e*", "div#game-info\x3e*", 2457855381), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "clear", "clear", 1108650431), "left", new cljs.core.Keyword(null, "margin-bottom", "margin-bottom", 3099939484), "20px", new cljs.core.Keyword(null, "overflow", "overflow", 1543546740), "hidden"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+  "div#chart", "div#chart", 1711439070), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "width", "width", 1127031096), [cljs.core.str(grow_game.core.chart_width), cljs.core.str("px")].join(""), new cljs.core.Keyword(null, "background-color", "background-color", 1619226998), grow_game.core.empty_colour, new cljs.core.Keyword(null, "border-style", "border-style", 1320929346), "solid", new cljs.core.Keyword(null, "border-width", "border-width", 1324275799), "3px"], null)], null), 
+  new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div#speed\x3e*", "div#speed\x3e*", 2877459379), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "float", "float", 1111430606), "left"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div#about", "div#about", 1709426829), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, 
+  "clear", "clear", 1108650431), "left"], null)], null), cljs.core.into.call(null, cljs.core.map.call(null, function(a) {
     return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.keyword.call(null, [cljs.core.str("div."), cljs.core.str(cljs.core.key.call(null, a))].join("")), (new cljs.core.Keyword(null, "style", "style", 1123684643)).cljs$core$IFn$_invoke$arity$1(cljs.core.val.call(null, a))], null);
   }, grow_game.core.cell_classes), cljs.core.map.call(null, function(a) {
     var c = [cljs.core.str(cljs.core.key.call(null, a)), cljs.core.str("-count")].join("");
@@ -23190,24 +23190,27 @@ grow_game.core.start_game_BANG_ = function() {
     }
   }
 };
-grow_game.core.speed_hotkey_handler = function(a) {
-  a = a.key;
-  return cljs.core._EQ_.call(null, a, "Right") ? grow_game.core.change_speed_BANG_.call(null, cljs.core._PLUS_) : cljs.core._EQ_.call(null, a, "Left") ? grow_game.core.change_speed_BANG_.call(null, cljs.core._) : null;
-};
-grow_game.core.set_speed_hotkeys_BANG_ = function() {
-  return document.body.onkeypress = grow_game.core.speed_hotkey_handler;
+grow_game.core.key_handler = function(a) {
+  a = a.keyCode;
+  return cljs.core._EQ_.call(null, a, 39) ? grow_game.core.change_speed_BANG_.call(null, cljs.core._PLUS_) : cljs.core._EQ_.call(null, a, 37) ? grow_game.core.change_speed_BANG_.call(null, cljs.core._) : cljs.core._EQ_.call(null, a, 82) ? grow_game.core.start_game_BANG_.call(null) : null;
 };
 grow_game.core.on_load = function() {
   grow_game.core.set_page_style_BANG_.call(null, grow_game.core.page_css.call(null));
-  document.body.innerHTML = grow_game.core.page_body.call(null);
+  goog.dom.getElement("game").innerHTML = grow_game.core.page_body;
   grow_game.core.set_all_cells_BANG_.call(null);
   grow_game.core.set_cells_click_BANG_.call(null);
   cljs.core.reset_BANG_.call(null, grow_game.core.chart_div, goog.dom.getElement("chart"));
-  cljs.core.reset_BANG_.call(null, grow_game.core.speed_div, goog.dom.getElement("speed"));
+  cljs.core.reset_BANG_.call(null, grow_game.core.speed_label_div, goog.dom.getElement("speed-label"));
   cljs.core.reset_BANG_.call(null, grow_game.core.clicks_remaining_div, goog.dom.getElement("clicks-remaining"));
+  goog.dom.getElement("decrease-speed-button").onclick = function() {
+    return grow_game.core.change_speed_BANG_.call(null, cljs.core._);
+  };
+  goog.dom.getElement("increase-speed-button").onclick = function() {
+    return grow_game.core.change_speed_BANG_.call(null, cljs.core._PLUS_);
+  };
   goog.dom.getElement("restart-button").onclick = grow_game.core.start_game_BANG_;
+  document.onkeydown = grow_game.core.key_handler;
   grow_game.core.start_timer.call(null);
-  grow_game.core.set_speed_hotkeys_BANG_.call(null);
   return grow_game.core.start_game_BANG_.call(null);
 };
 window.onload = grow_game.core.on_load;
