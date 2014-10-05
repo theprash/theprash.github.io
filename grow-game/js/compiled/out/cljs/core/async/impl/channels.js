@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-2197
+// Compiled by ClojureScript 0.0-2356
 goog.provide('cljs.core.async.impl.channels');
 goog.require('cljs.core');
 goog.require('cljs.core.async.impl.buffers');
@@ -7,36 +7,36 @@ goog.require('cljs.core.async.impl.dispatch');
 goog.require('cljs.core.async.impl.dispatch');
 goog.require('cljs.core.async.impl.protocols');
 goog.require('cljs.core.async.impl.protocols');
-cljs.core.async.impl.channels.box = (function box(val){if(typeof cljs.core.async.impl.channels.t18327 !== 'undefined')
+cljs.core.async.impl.channels.box = (function box(val){if(typeof cljs.core.async.impl.channels.t14862 !== 'undefined')
 {} else
 {
 /**
 * @constructor
 */
-cljs.core.async.impl.channels.t18327 = (function (val,box,meta18328){
+cljs.core.async.impl.channels.t14862 = (function (val,box,meta14863){
 this.val = val;
 this.box = box;
-this.meta18328 = meta18328;
+this.meta14863 = meta14863;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 this.cljs$lang$protocol_mask$partition0$ = 425984;
 })
-cljs.core.async.impl.channels.t18327.cljs$lang$type = true;
-cljs.core.async.impl.channels.t18327.cljs$lang$ctorStr = "cljs.core.async.impl.channels/t18327";
-cljs.core.async.impl.channels.t18327.cljs$lang$ctorPrWriter = (function (this__8447__auto__,writer__8448__auto__,opt__8449__auto__){return cljs.core._write.call(null,writer__8448__auto__,"cljs.core.async.impl.channels/t18327");
+cljs.core.async.impl.channels.t14862.cljs$lang$type = true;
+cljs.core.async.impl.channels.t14862.cljs$lang$ctorStr = "cljs.core.async.impl.channels/t14862";
+cljs.core.async.impl.channels.t14862.cljs$lang$ctorPrWriter = (function (this__4215__auto__,writer__4216__auto__,opt__4217__auto__){return cljs.core._write.call(null,writer__4216__auto__,"cljs.core.async.impl.channels/t14862");
 });
-cljs.core.async.impl.channels.t18327.prototype.cljs$core$IDeref$_deref$arity$1 = (function (_){var self__ = this;
+cljs.core.async.impl.channels.t14862.prototype.cljs$core$IDeref$_deref$arity$1 = (function (_){var self__ = this;
 var ___$1 = this;return self__.val;
 });
-cljs.core.async.impl.channels.t18327.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_18329){var self__ = this;
-var _18329__$1 = this;return self__.meta18328;
+cljs.core.async.impl.channels.t14862.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_14864){var self__ = this;
+var _14864__$1 = this;return self__.meta14863;
 });
-cljs.core.async.impl.channels.t18327.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_18329,meta18328__$1){var self__ = this;
-var _18329__$1 = this;return (new cljs.core.async.impl.channels.t18327(self__.val,self__.box,meta18328__$1));
+cljs.core.async.impl.channels.t14862.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_14864,meta14863__$1){var self__ = this;
+var _14864__$1 = this;return (new cljs.core.async.impl.channels.t14862(self__.val,self__.box,meta14863__$1));
 });
-cljs.core.async.impl.channels.__GT_t18327 = (function __GT_t18327(val__$1,box__$1,meta18328){return (new cljs.core.async.impl.channels.t18327(val__$1,box__$1,meta18328));
+cljs.core.async.impl.channels.__GT_t14862 = (function __GT_t14862(val__$1,box__$1,meta14863){return (new cljs.core.async.impl.channels.t14862(val__$1,box__$1,meta14863));
 });
 }
-return (new cljs.core.async.impl.channels.t18327(val,box,null));
+return (new cljs.core.async.impl.channels.t14862(val,box,null));
 });
 
 /**
@@ -48,13 +48,13 @@ this.val = val;
 })
 cljs.core.async.impl.channels.PutBox.cljs$lang$type = true;
 cljs.core.async.impl.channels.PutBox.cljs$lang$ctorStr = "cljs.core.async.impl.channels/PutBox";
-cljs.core.async.impl.channels.PutBox.cljs$lang$ctorPrWriter = (function (this__8450__auto__,writer__8451__auto__,opts__8452__auto__){return cljs.core._write.call(null,writer__8451__auto__,"cljs.core.async.impl.channels/PutBox");
+cljs.core.async.impl.channels.PutBox.cljs$lang$ctorPrWriter = (function (this__4218__auto__,writer__4219__auto__,opts__4220__auto__){return cljs.core._write.call(null,writer__4219__auto__,"cljs.core.async.impl.channels/PutBox");
 });
 cljs.core.async.impl.channels.__GT_PutBox = (function __GT_PutBox(handler,val){return (new cljs.core.async.impl.channels.PutBox(handler,val));
 });
 cljs.core.async.impl.channels.put_active_QMARK_ = (function put_active_QMARK_(box){return cljs.core.async.impl.protocols.active_QMARK_.call(null,box.handler);
 });
-cljs.core.async.impl.channels.MAX_DIRTY = 64;
+cljs.core.async.impl.channels.MAX_DIRTY = (64);
 
 /**
 * @constructor
@@ -69,7 +69,7 @@ this.closed = closed;
 })
 cljs.core.async.impl.channels.ManyToManyChannel.cljs$lang$type = true;
 cljs.core.async.impl.channels.ManyToManyChannel.cljs$lang$ctorStr = "cljs.core.async.impl.channels/ManyToManyChannel";
-cljs.core.async.impl.channels.ManyToManyChannel.cljs$lang$ctorPrWriter = (function (this__8447__auto__,writer__8448__auto__,opt__8449__auto__){return cljs.core._write.call(null,writer__8448__auto__,"cljs.core.async.impl.channels/ManyToManyChannel");
+cljs.core.async.impl.channels.ManyToManyChannel.cljs$lang$ctorPrWriter = (function (this__4215__auto__,writer__4216__auto__,opt__4217__auto__){return cljs.core._write.call(null,writer__4216__auto__,"cljs.core.async.impl.channels/ManyToManyChannel");
 });
 cljs.core.async.impl.channels.ManyToManyChannel.prototype.cljs$core$async$impl$protocols$Channel$ = true;
 cljs.core.async.impl.channels.ManyToManyChannel.prototype.cljs$core$async$impl$protocols$Channel$closed_QMARK_$arity$1 = (function (_){var self__ = this;
@@ -81,12 +81,12 @@ var this$__$1 = this;if(self__.closed)
 } else
 {self__.closed = true;
 while(true){
-var taker_18330 = self__.takes.pop();if((taker_18330 == null))
+var taker_14865 = self__.takes.pop();if((taker_14865 == null))
 {} else
-{if(cljs.core.async.impl.protocols.active_QMARK_.call(null,taker_18330))
-{var take_cb_18331 = cljs.core.async.impl.protocols.commit.call(null,taker_18330);cljs.core.async.impl.dispatch.run.call(null,((function (take_cb_18331,taker_18330,this$__$1){
-return (function (){return take_cb_18331.call(null,null);
-});})(take_cb_18331,taker_18330,this$__$1))
+{if(cljs.core.async.impl.protocols.active_QMARK_.call(null,taker_14865))
+{var take_cb_14866 = cljs.core.async.impl.protocols.commit.call(null,taker_14865);cljs.core.async.impl.dispatch.run.call(null,((function (take_cb_14866,taker_14865,this$__$1){
+return (function (){return take_cb_14866.call(null,null);
+});})(take_cb_14866,taker_14865,this$__$1))
 );
 } else
 {}
@@ -104,7 +104,7 @@ cljs.core.async.impl.channels.ManyToManyChannel.prototype.cljs$core$async$impl$p
 var this$__$1 = this;if(!(cljs.core.async.impl.protocols.active_QMARK_.call(null,handler)))
 {return null;
 } else
-{if((!((self__.buf == null))) && ((cljs.core.count.call(null,self__.buf) > 0)))
+{if((!((self__.buf == null))) && ((cljs.core.count.call(null,self__.buf) > (0))))
 {var _ = cljs.core.async.impl.protocols.commit.call(null,handler);return cljs.core.async.impl.channels.box.call(null,cljs.core.async.impl.protocols.remove_BANG_.call(null,self__.buf));
 } else
 {while(true){
@@ -125,14 +125,14 @@ continue;
 {var _ = cljs.core.async.impl.protocols.commit.call(null,handler);return cljs.core.async.impl.channels.box.call(null,null);
 } else
 {if((self__.dirty_takes > cljs.core.async.impl.channels.MAX_DIRTY))
-{self__.dirty_takes = 0;
+{self__.dirty_takes = (0);
 self__.takes.cleanup(cljs.core.async.impl.protocols.active_QMARK_);
 } else
-{self__.dirty_takes = (self__.dirty_takes + 1);
+{self__.dirty_takes = (self__.dirty_takes + (1));
 }
 if((self__.takes.length < cljs.core.async.impl.protocols.MAX_QUEUE_SIZE))
 {} else
-{throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str([cljs.core.str("No more than "),cljs.core.str(cljs.core.async.impl.protocols.MAX_QUEUE_SIZE),cljs.core.str(" pending takes are allowed on a single channel.")].join('')),cljs.core.str("\n"),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"<","<",-1640531467,null),cljs.core.list(new cljs.core.Symbol(null,".-length",".-length",1395928862,null),new cljs.core.Symbol(null,"takes","takes",-1530407291,null)),new cljs.core.Symbol("impl","MAX-QUEUE-SIZE","impl/MAX-QUEUE-SIZE",-1989946393,null))))].join('')));
+{throw (new Error(("Assert failed: "+cljs.core.str.cljs$core$IFn$_invoke$arity$1(("No more than "+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.async.impl.protocols.MAX_QUEUE_SIZE)+" pending takes are allowed on a single channel."))+"\n"+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"<","<",993667236,null),cljs.core.list(new cljs.core.Symbol(null,".-length",".-length",-280799999,null),new cljs.core.Symbol(null,"takes","takes",298247964,null)),new cljs.core.Symbol("impl","MAX-QUEUE-SIZE","impl/MAX-QUEUE-SIZE",1508600732,null)))))));
 }
 self__.takes.unbounded_unshift(handler);
 return null;
@@ -147,7 +147,7 @@ cljs.core.async.impl.channels.ManyToManyChannel.prototype.cljs$core$async$impl$p
 cljs.core.async.impl.channels.ManyToManyChannel.prototype.cljs$core$async$impl$protocols$WritePort$put_BANG_$arity$3 = (function (this$,val,handler){var self__ = this;
 var this$__$1 = this;if(!((val == null)))
 {} else
-{throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str("Can't put nil in on a channel"),cljs.core.str("\n"),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"not","not",-1640422260,null),cljs.core.list(new cljs.core.Symbol(null,"nil?","nil?",-1637150201,null),new cljs.core.Symbol(null,"val","val",-1640415014,null)))))].join('')));
+{throw (new Error(("Assert failed: Can't put nil in on a channel\n"+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"not","not",1044554643,null),cljs.core.list(new cljs.core.Symbol(null,"nil?","nil?",1612038930,null),new cljs.core.Symbol(null,"val","val",1769233139,null))))))));
 }
 var closed__$1 = self__.closed;if((closed__$1) || (!(cljs.core.async.impl.protocols.active_QMARK_.call(null,handler))))
 {return cljs.core.async.impl.channels.box.call(null,!(closed__$1));
@@ -171,14 +171,14 @@ continue;
 return cljs.core.async.impl.channels.box.call(null,true);
 } else
 {if((self__.dirty_puts > cljs.core.async.impl.channels.MAX_DIRTY))
-{self__.dirty_puts = 0;
+{self__.dirty_puts = (0);
 self__.puts.cleanup(cljs.core.async.impl.channels.put_active_QMARK_);
 } else
-{self__.dirty_puts = (self__.dirty_puts + 1);
+{self__.dirty_puts = (self__.dirty_puts + (1));
 }
 if((self__.puts.length < cljs.core.async.impl.protocols.MAX_QUEUE_SIZE))
 {} else
-{throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str([cljs.core.str("No more than "),cljs.core.str(cljs.core.async.impl.protocols.MAX_QUEUE_SIZE),cljs.core.str(" pending puts are allowed on a single channel."),cljs.core.str(" Consider using a windowed buffer.")].join('')),cljs.core.str("\n"),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"<","<",-1640531467,null),cljs.core.list(new cljs.core.Symbol(null,".-length",".-length",1395928862,null),new cljs.core.Symbol(null,"puts","puts",-1637078787,null)),new cljs.core.Symbol("impl","MAX-QUEUE-SIZE","impl/MAX-QUEUE-SIZE",-1989946393,null))))].join('')));
+{throw (new Error(("Assert failed: "+cljs.core.str.cljs$core$IFn$_invoke$arity$1(("No more than "+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.async.impl.protocols.MAX_QUEUE_SIZE)+" pending puts are allowed on a single channel. Consider using a windowed buffer."))+"\n"+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"<","<",993667236,null),cljs.core.list(new cljs.core.Symbol(null,".-length",".-length",-280799999,null),new cljs.core.Symbol(null,"puts","puts",-1883877054,null)),new cljs.core.Symbol("impl","MAX-QUEUE-SIZE","impl/MAX-QUEUE-SIZE",1508600732,null)))))));
 }
 self__.puts.unbounded_unshift((new cljs.core.async.impl.channels.PutBox(handler,val)));
 return null;
@@ -190,7 +190,7 @@ break;
 });
 cljs.core.async.impl.channels.__GT_ManyToManyChannel = (function __GT_ManyToManyChannel(takes,dirty_takes,puts,dirty_puts,buf,closed){return (new cljs.core.async.impl.channels.ManyToManyChannel(takes,dirty_takes,puts,dirty_puts,buf,closed));
 });
-cljs.core.async.impl.channels.chan = (function chan(buf){return (new cljs.core.async.impl.channels.ManyToManyChannel(cljs.core.async.impl.buffers.ring_buffer.call(null,32),0,cljs.core.async.impl.buffers.ring_buffer.call(null,32),0,buf,false));
+cljs.core.async.impl.channels.chan = (function chan(buf){return (new cljs.core.async.impl.channels.ManyToManyChannel(cljs.core.async.impl.buffers.ring_buffer.call(null,(32)),(0),cljs.core.async.impl.buffers.ring_buffer.call(null,(32)),(0),buf,false));
 });
 
 //# sourceMappingURL=channels.js.map

@@ -84,7 +84,11 @@
       [:div#speed-label]
       [:button#increase-speed-button "+"]]
      [:div#clicks-remaining]
-     [:div [:button#restart-button "Restart (R)"]]]))
+     [:div [:button#restart-button "Restart (R)"]]]
+    [:div#about "Written in ClojureScript. "
+     [:a {:href "https://github.com/theprash/theprash.github.io/tree/master/grow-game/cljs/grow_game"}
+      "View code"]]
+    ))
 
 (defn get-cell-class [cell-vec]
   (when-let [kv (first (filter (fn [kv] (get (val kv) cell-vec))
@@ -92,29 +96,29 @@
     (key kv)))
 
 (defn page-css []
-    (apply css
-           [:body {:background-color "#F1F2C0"
-                   :font-family "Helvetica"}]
-           [:div#game-info {:padding "10px"
-                            :display "inline-block"
-                            :width "200px"}]
-           [:div#game-info>* {:clear "left"
-                              :margin-bottom "20px"
-                              :overflow "hidden"}]
-           [:div#chart {:width (str chart-width "px")
-                        :background-color empty-colour
-                        :border-style "solid"
-                        :border-width "3px"}]
-           [:div#speed>* {:float "left"}]
-           [:div#about {:clear "left"}]
-           (map (fn [cell-class]
-                  (let [div-id (str (key cell-class) "-count")]
-                    [(keyword (str "div#" div-id))
-                     (merge (select-keys (-> cell-class val :style)
-                                         [:background-color])
-                            {:color "white"})]))
-                (filter #(count-cell-class? (key %))
-                        cell-types))))
+  (apply css
+         [:body {:background-color "#F1F2C0"
+                 :font-family "Helvetica"}]
+         [:div#game-info {:padding "10px"
+                          :display "inline-block"
+                          :width "200px"}]
+         [:div#game-info>* {:clear "left"
+                            :margin-bottom "20px"
+                            :overflow "hidden"}]
+         [:div#chart {:width (str chart-width "px")
+                      :background-color empty-colour
+                      :border-style "solid"
+                      :border-width "3px"}]
+         [:div#speed>* {:float "left"}]
+         [:div#about {:clear "left"}]
+         (map (fn [cell-class]
+                (let [div-id (str (key cell-class) "-count")]
+                  [(keyword (str "div#" div-id))
+                   (merge (select-keys (-> cell-class val :style)
+                                       [:background-color])
+                          {:color "white"})]))
+              (filter #(count-cell-class? (key %))
+                      cell-types))))
 
 (defn set-page-style! [css-text]
   (set! (-> js/document
@@ -175,12 +179,12 @@
                                      (keys cell-types)))))))
 
 (defn tick! []
-  (time (let [cell-vecs @grow-queue]
-          (grow-cells! cell-vecs)
-          (draw/draw-frame!
-            (fn []
-              (draw/draw-fn {:cells @all-cells} @canvas cell-types)
-              (update-chart!))))))
+  (let [cell-vecs @grow-queue]
+    (grow-cells! cell-vecs)
+    (draw/draw-frame!
+      (fn []
+        (draw/draw-fn {:cells @all-cells} @canvas cell-types)
+        (update-chart!)))))
 
 (defn swap-clicks-remaining! [swap-fn]
   (swap! clicks-remaining swap-fn)
