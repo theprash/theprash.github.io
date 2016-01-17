@@ -12130,9 +12130,8 @@ Elm.NBack.make = function (_elm) {
    };
    var Stop = {ctor: "Stop"};
    var Start = {ctor: "Start"};
-   var SetGridSize = function (a) {
-      return {ctor: "SetGridSize",_0: a};
-   };
+   var IncreaseSize = {ctor: "IncreaseSize"};
+   var DecreaseSize = {ctor: "DecreaseSize"};
    var Tick = function (a) {    return {ctor: "Tick",_0: a};};
    var NumberDimension = {ctor: "NumberDimension"};
    var PositionDimension = {ctor: "PositionDimension"};
@@ -12220,6 +12219,10 @@ Elm.NBack.make = function (_elm) {
          return _.stepHistory;
       }(model))});
    };
+   var changeSize = F2(function (size,model) {
+      return _U.update(model,
+      {gridSize: size,grid: A2(makeGrid,size,$Maybe.Nothing)});
+   });
    var update = F2(function (action,model) {
       var _p9 = action;
       switch (_p9.ctor)
@@ -12237,10 +12240,19 @@ Elm.NBack.make = function (_elm) {
                   _p10,
                   model)) : A2(updateTick,_p10,model)
                   ,_1: $Effects.tick(Tick)};
-         case "SetGridSize": var size = A2($Basics.max,1,_p9._0);
+         case "DecreaseSize": var size = A2($Basics.max,
+           2,
+           function (_) {
+              return _.gridSize;
+           }(model) - 1);
            return {ctor: "_Tuple2"
-                  ,_0: _U.update(model,
-                  {gridSize: size,grid: A2(makeGrid,size,$Maybe.Nothing)})
+                  ,_0: A2(changeSize,size,model)
+                  ,_1: $Effects.none};
+         case "IncreaseSize": var size = function (_) {
+              return _.gridSize;
+           }(model) + 1;
+           return {ctor: "_Tuple2"
+                  ,_0: A2(changeSize,size,model)
                   ,_1: $Effects.none};
          case "Start":
          var startingSeed = $Random.initialSeed($Basics.floor(function (_) {
@@ -12377,8 +12389,17 @@ Elm.NBack.make = function (_elm) {
                                _U.list([A2($Html.button,
                                _U.list([]),
                                _U.list([$Html.text("Stop")]))]))]) : _U.list([A2($Html.button,
-              _U.list([A2($Html$Events.onClick,address,Start)]),
-              _U.list([$Html.text("Start")]))]))
+                                                                             _U.list([A2($Html$Events.onClick,address,Start)]),
+                                                                             _U.list([$Html.text("Start")]))
+                                                                             ,A2($Html.div,
+                                                                             _U.list([]),
+                                                                             _U.list([A2($Html.button,
+                                                                                     _U.list([A2($Html$Events.onClick,address,DecreaseSize)]),
+                                                                                     _U.list([$Html.text("-")]))
+                                                                                     ,$Html.text("Size")
+                                                                                     ,A2($Html.button,
+                                                                                     _U.list([A2($Html$Events.onClick,address,IncreaseSize)]),
+                                                                                     _U.list([$Html.text("+")]))]))]))
               ,A2($Html.div,
               _U.list([]),
               _U.list([$Html.text(A2($Basics._op["++"],
@@ -12425,13 +12446,15 @@ Elm.NBack.make = function (_elm) {
                               ,PositionDimension: PositionDimension
                               ,NumberDimension: NumberDimension
                               ,Tick: Tick
-                              ,SetGridSize: SetGridSize
+                              ,DecreaseSize: DecreaseSize
+                              ,IncreaseSize: IncreaseSize
                               ,Start: Start
                               ,Stop: Stop
                               ,TryMatch: TryMatch
                               ,updateTick: updateTick
                               ,nextStep: nextStep
                               ,tryMatch: tryMatch
+                              ,changeSize: changeSize
                               ,update: update
                               ,cellStyle: cellStyle
                               ,cellView: cellView
